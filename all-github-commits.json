@@ -1,0 +1,1837 @@
+{
+  "total": 128,
+  "commits": [
+    {
+      "repo": "RKD-CRM",
+      "sha": "f27a04f",
+      "date": "2026-05-18T18:41:48Z",
+      "dateOnly": "2026-05-18",
+      "message": "first commit from hp"
+    },
+    {
+      "repo": "RKD-RBC-AGENTS",
+      "sha": "219d8c4",
+      "date": "2026-05-19T08:47:17Z",
+      "dateOnly": "2026-05-19",
+      "message": "LETS COMMIT FIRST ON HP"
+    },
+    {
+      "repo": "scrapling",
+      "sha": "219d8c4",
+      "date": "2026-05-19T08:47:17Z",
+      "dateOnly": "2026-05-19",
+      "message": "LETS COMMIT FIRST ON HP"
+    },
+    {
+      "repo": "RKD-RBC-AGENTS",
+      "sha": "c739016",
+      "date": "2026-05-19T09:33:21Z",
+      "dateOnly": "2026-05-19",
+      "message": "feat: add linkedin setup guide and dynamic connection status display"
+    },
+    {
+      "repo": "scrapling",
+      "sha": "c739016",
+      "date": "2026-05-19T09:33:21Z",
+      "dateOnly": "2026-05-19",
+      "message": "feat: add linkedin setup guide and dynamic connection status display"
+    },
+    {
+      "repo": "RKD-RBC-AGENTS",
+      "sha": "c5e9bb5",
+      "date": "2026-05-19T09:41:24Z",
+      "dateOnly": "2026-05-19",
+      "message": "feat: implement LinkedInStudio component and integrate it into the main dashboard page"
+    },
+    {
+      "repo": "scrapling",
+      "sha": "c5e9bb5",
+      "date": "2026-05-19T09:41:24Z",
+      "dateOnly": "2026-05-19",
+      "message": "feat: implement LinkedInStudio component and integrate it into the main dashboard page"
+    },
+    {
+      "repo": "RKD-RBC-AGENTS",
+      "sha": "3b56c71",
+      "date": "2026-05-19T09:42:32Z",
+      "dateOnly": "2026-05-19",
+      "message": "style: clean up duplicate classes in image preview container"
+    },
+    {
+      "repo": "scrapling",
+      "sha": "3b56c71",
+      "date": "2026-05-19T09:42:32Z",
+      "dateOnly": "2026-05-19",
+      "message": "style: clean up duplicate classes in image preview container"
+    },
+    {
+      "repo": "RKD-RBC-AGENTS",
+      "sha": "dbf3c37",
+      "date": "2026-05-19T10:28:03Z",
+      "dateOnly": "2026-05-19",
+      "message": "feat: add SettingsHub component for managing AI strategy, asset configuration, and API keys"
+    },
+    {
+      "repo": "scrapling",
+      "sha": "dbf3c37",
+      "date": "2026-05-19T10:28:03Z",
+      "dateOnly": "2026-05-19",
+      "message": "feat: add SettingsHub component for managing AI strategy, asset configuration, and API keys"
+    },
+    {
+      "repo": "RKD-RBC-AGENTS",
+      "sha": "2d77a9f",
+      "date": "2026-05-19T10:47:00Z",
+      "dateOnly": "2026-05-19",
+      "message": "feat: implement main dashboard page with settings management, research tracking, and content library integration"
+    },
+    {
+      "repo": "scrapling",
+      "sha": "2d77a9f",
+      "date": "2026-05-19T10:47:00Z",
+      "dateOnly": "2026-05-19",
+      "message": "feat: implement main dashboard page with settings management, research tracking, and content library integration"
+    },
+    {
+      "repo": "RKD-CRM",
+      "sha": "11e4c5e",
+      "date": "2026-05-21T04:07:08Z",
+      "dateOnly": "2026-05-21",
+      "message": "Initial commit — RKD CRM v1 (Next.js 16, Prisma 7, Neon, NextAuth, Gmail API)"
+    },
+    {
+      "repo": "RKD-CRM",
+      "sha": "d18d5eb",
+      "date": "2026-05-21T04:29:51Z",
+      "dateOnly": "2026-05-21",
+      "message": "chore: remove junk files, fix vercel.json crons, drop drizzle-kit"
+    },
+    {
+      "repo": "RKD-CRM",
+      "sha": "c6fa7a6",
+      "date": "2026-05-21T04:32:49Z",
+      "dateOnly": "2026-05-21",
+      "message": "chore: remove all outdated docs, old parser, unused tests, build cache"
+    },
+    {
+      "repo": "RKD-CRM",
+      "sha": "c9db624",
+      "date": "2026-05-21T04:37:32Z",
+      "dateOnly": "2026-05-21",
+      "message": "chore: remove vercel.json — crons handled by cron-job.org"
+    },
+    {
+      "repo": "RKD-CRM",
+      "sha": "ed85720",
+      "date": "2026-05-21T04:41:19Z",
+      "dateOnly": "2026-05-21",
+      "message": "fix: add .npmrc with legacy-peer-deps for nodemailer/next-auth conflict"
+    },
+    {
+      "repo": "RKD-CRM",
+      "sha": "5321154",
+      "date": "2026-05-21T04:43:29Z",
+      "dateOnly": "2026-05-21",
+      "message": "g"
+    },
+    {
+      "repo": "RKD-CRM",
+      "sha": "cce771f",
+      "date": "2026-05-21T04:48:36Z",
+      "dateOnly": "2026-05-21",
+      "message": "fix: cast contacts to any to resolve JsonValue type mismatch"
+    },
+    {
+      "repo": "RKD-CRM",
+      "sha": "2d0e174",
+      "date": "2026-05-21T05:31:55Z",
+      "dateOnly": "2026-05-21",
+      "message": "fix: show sent emails on dashboard — use NOT DRAFT filter instead of not null"
+    },
+    {
+      "repo": "RKD-CRM",
+      "sha": "0eea670",
+      "date": "2026-05-21T05:37:20Z",
+      "dateOnly": "2026-05-21",
+      "message": "fix: force dynamic rendering on dashboard to prevent stale cache"
+    },
+    {
+      "repo": "RKD-CRM",
+      "sha": "aa3f765",
+      "date": "2026-05-21T05:59:12Z",
+      "dateOnly": "2026-05-21",
+      "message": "fix: correct NOT DRAFT filter in dashboard API + add debug endpoint"
+    },
+    {
+      "repo": "RKD-CRM",
+      "sha": "7287c3c",
+      "date": "2026-05-21T06:01:23Z",
+      "dateOnly": "2026-05-21",
+      "message": "fix: use OR filter for null/non-DRAFT emails — Prisma NOT excludes nulls"
+    },
+    {
+      "repo": "RKD-CRM",
+      "sha": "24224f5",
+      "date": "2026-05-21T06:28:05Z",
+      "dateOnly": "2026-05-21",
+      "message": "feat: redesign automation panel — always visible, WA reminders, pill day selector"
+    },
+    {
+      "repo": "RKD-CRM",
+      "sha": "aaf2c1d",
+      "date": "2026-05-21T09:22:06Z",
+      "dateOnly": "2026-05-21",
+      "message": "F"
+    },
+    {
+      "repo": "RKD-CRM",
+      "sha": "795030e",
+      "date": "2026-05-21T10:36:05Z",
+      "dateOnly": "2026-05-21",
+      "message": "CC ADDED AND COMPOSE WRITING GONE FIX AND TEMPLATE CALANDER FIX AND OR COMPANY BOTH ID DONE"
+    },
+    {
+      "repo": "RKD-CRM",
+      "sha": "e343554",
+      "date": "2026-05-21T10:54:16Z",
+      "dateOnly": "2026-05-21",
+      "message": "cc page update"
+    },
+    {
+      "repo": "RKD-CRM",
+      "sha": "bc48131",
+      "date": "2026-05-21T11:59:21Z",
+      "dateOnly": "2026-05-21",
+      "message": "dashboard collapable now"
+    },
+    {
+      "repo": "RKD-CPR",
+      "sha": "10aff72",
+      "date": "2026-05-22T05:41:53Z",
+      "dateOnly": "2026-05-22",
+      "message": "RKD DATA IMPORTER V1"
+    },
+    {
+      "repo": "RKD-CPR",
+      "sha": "dacdf38",
+      "date": "2026-05-22T05:45:57Z",
+      "dateOnly": "2026-05-22",
+      "message": "V2"
+    },
+    {
+      "repo": "RKD-CPR",
+      "sha": "4d5a92a",
+      "date": "2026-05-22T05:54:22Z",
+      "dateOnly": "2026-05-22",
+      "message": "Add credentials setup guide helper page"
+    },
+    {
+      "repo": "RKD-CPR",
+      "sha": "8527cc1",
+      "date": "2026-05-22T06:24:11Z",
+      "dateOnly": "2026-05-22",
+      "message": "Upgrade default Gemini model to 2.5-flash, fix RLS & storage policies, and resolve web-app-capable and GoTrue warnings"
+    },
+    {
+      "repo": "RKD-CPR",
+      "sha": "2293da3",
+      "date": "2026-05-22T06:27:00Z",
+      "dateOnly": "2026-05-22",
+      "message": "Fix typescript implicit any errors in login and parse API routes to fix Vercel compilation"
+    },
+    {
+      "repo": "RKD-CPR",
+      "sha": "718c4ce",
+      "date": "2026-05-22T06:37:31Z",
+      "dateOnly": "2026-05-22",
+      "message": "feat: catch and display Google Sheets sync errors in frontend"
+    },
+    {
+      "repo": "RKD-CPR",
+      "sha": "a32d7ba",
+      "date": "2026-05-22T06:40:13Z",
+      "dateOnly": "2026-05-22",
+      "message": "fix: escape apostrophe in SuccessCard and optimize prompt for printed POs"
+    },
+    {
+      "repo": "RKD-CPR",
+      "sha": "c001eac",
+      "date": "2026-05-22T06:52:37Z",
+      "dateOnly": "2026-05-22",
+      "message": "Enhance PO metadata columns, upgrade duplicate checking logic, add duplicate bypass toggle, and implement retro CLI sync console in SuccessCard"
+    },
+    {
+      "repo": "RKD-CPR",
+      "sha": "5501019",
+      "date": "2026-05-22T11:16:51Z",
+      "dateOnly": "2026-05-22",
+      "message": "feat: display both camera and gallery buttons side-by-side on mobile PWA UI"
+    },
+    {
+      "repo": "RKD-CPR",
+      "sha": "59a0f6f",
+      "date": "2026-05-22T11:22:39Z",
+      "dateOnly": "2026-05-22",
+      "message": "feat: customize system structure specifically for Crochet Passing Report handwritten sheets"
+    },
+    {
+      "repo": "RKD-CPR",
+      "sha": "3931b5b",
+      "date": "2026-05-23T04:51:07Z",
+      "dateOnly": "2026-05-23",
+      "message": "Implement PWA and Add to Home Screen button for Android/iOS"
+    },
+    {
+      "repo": "RKD-CPR",
+      "sha": "0f3f218",
+      "date": "2026-05-23T04:57:25Z",
+      "dateOnly": "2026-05-23",
+      "message": "Set default redirect screen to /upload for all accounts"
+    },
+    {
+      "repo": "RKD-CPR",
+      "sha": "03272bb",
+      "date": "2026-05-23T05:17:04Z",
+      "dateOnly": "2026-05-23",
+      "message": "Update README.md for remind"
+    },
+    {
+      "repo": "RKD-CRM",
+      "sha": "151f9d7",
+      "date": "2026-05-23T06:25:53Z",
+      "dateOnly": "2026-05-23",
+      "message": "Feat/Fix: Add Help Button, RyanAI chatbot, fix Gmail reply tracking, and clean up schema relations"
+    },
+    {
+      "repo": "RKD-CRM",
+      "sha": "43e4c00",
+      "date": "2026-05-23T07:09:19Z",
+      "dateOnly": "2026-05-23",
+      "message": "Fix: Exclude api/cron routes from NextAuth middleware matcher"
+    },
+    {
+      "repo": "RKD-CRM",
+      "sha": "ecd9e89",
+      "date": "2026-05-23T07:21:54Z",
+      "dateOnly": "2026-05-23",
+      "message": "Fix: Sync replies for all active sent emails in check-followups cron"
+    },
+    {
+      "repo": "RKD-CRM",
+      "sha": "0063a02",
+      "date": "2026-05-23T07:33:16Z",
+      "dateOnly": "2026-05-23",
+      "message": "Fix: Differentiate list view between Inbox and Sent Outbox folders for email replies"
+    },
+    {
+      "repo": "RKD-CRM",
+      "sha": "d2f5b6c",
+      "date": "2026-05-23T11:04:01Z",
+      "dateOnly": "2026-05-23",
+      "message": "Fix: Add proper contact sender headers and avatar to incoming replies in thread view"
+    },
+    {
+      "repo": "RKD-CRM",
+      "sha": "d28ebe9",
+      "date": "2026-05-23T11:10:31Z",
+      "dateOnly": "2026-05-23",
+      "message": "Feat: Implement full Gmail-style thread view, chronological message grouping, and inline SMTP reply functionality in DashboardMailbox"
+    },
+    {
+      "repo": "RKD-CRM",
+      "sha": "ca3b5ab",
+      "date": "2026-05-23T11:12:48Z",
+      "dateOnly": "2026-05-23",
+      "message": "Fix: Filter out static assistant welcome message from chat history in ryanai route"
+    },
+    {
+      "repo": "RKD-CRM",
+      "sha": "5bfe0e7",
+      "date": "2026-05-23T11:21:37Z",
+      "dateOnly": "2026-05-23",
+      "message": "feat: implement local Q&A fuzzy matching and inline Gemini API key prompt for RyanAI"
+    },
+    {
+      "repo": "RKD-CRM",
+      "sha": "3ed7c69",
+      "date": "2026-05-23T11:49:53Z",
+      "dateOnly": "2026-05-23",
+      "message": "docs: add comprehensive README.md and scratch testing scripts"
+    },
+    {
+      "repo": "RKD-CPR",
+      "sha": "8963fdc",
+      "date": "2026-05-30T04:28:50Z",
+      "dateOnly": "2026-05-30",
+      "message": "Update PWA logo to RKDCPR.LOGO.png and regenerate icons"
+    },
+    {
+      "repo": "RKD-CPR",
+      "sha": "f738319",
+      "date": "2026-05-30T05:24:36Z",
+      "dateOnly": "2026-05-30",
+      "message": "Final production prep: detailed README, credentials setup guide, and cleanup of redundant files"
+    },
+    {
+      "repo": "RKD-CRM",
+      "sha": "2057cb8",
+      "date": "2026-05-30T08:37:35Z",
+      "dateOnly": "2026-05-30",
+      "message": "feat: add Gemini reply snippets, WhatsApp Meta connection testing card, and color-coded notification badges"
+    },
+    {
+      "repo": "RKD-CRM",
+      "sha": "84e85d7",
+      "date": "2026-06-06T06:04:58Z",
+      "dateOnly": "2026-06-06",
+      "message": "feat: implement Claude AI lead management with bulk draft generation and lead tracking capabilities"
+    },
+    {
+      "repo": "RKD-CRM",
+      "sha": "eef30eb",
+      "date": "2026-06-06T06:19:25Z",
+      "dateOnly": "2026-06-06",
+      "message": "Simplify MCP route implementation with direct Prisma queries to work with mcp-remote"
+    },
+    {
+      "repo": "RKD-CRM",
+      "sha": "e326909",
+      "date": "2026-06-06T06:23:32Z",
+      "dateOnly": "2026-06-06",
+      "message": "Replace MCP route with manual JSON-RPC protocol implementation to bypass transport issues"
+    },
+    {
+      "repo": "RKD-CRM",
+      "sha": "879d6c9",
+      "date": "2026-06-06T06:27:51Z",
+      "dateOnly": "2026-06-06",
+      "message": "Exclude /mcp from auth middleware"
+    },
+    {
+      "repo": "RKD-CRM",
+      "sha": "b309c2a",
+      "date": "2026-06-06T06:46:17Z",
+      "dateOnly": "2026-06-06",
+      "message": "Elevate Claude Leads and Drafts sections to first-class dashboard navigation pages"
+    },
+    {
+      "repo": "RKD-CRM",
+      "sha": "0e0d37e",
+      "date": "2026-06-06T06:51:23Z",
+      "dateOnly": "2026-06-06",
+      "message": "Allow drafts to be opened in Compose view to configure followups and send"
+    },
+    {
+      "repo": "RKD-CRM",
+      "sha": "8d1287a",
+      "date": "2026-06-06T10:06:29Z",
+      "dateOnly": "2026-06-06",
+      "message": "QUick button added"
+    },
+    {
+      "repo": "RKD-CRM",
+      "sha": "f2abcec",
+      "date": "2026-06-06T10:09:09Z",
+      "dateOnly": "2026-06-06",
+      "message": "UUID add in quick"
+    },
+    {
+      "repo": "RKD-CRM",
+      "sha": "139e798",
+      "date": "2026-06-06T11:38:49Z",
+      "dateOnly": "2026-06-06",
+      "message": "Sep leads"
+    },
+    {
+      "repo": "RKD-CRM",
+      "sha": "1f793c2",
+      "date": "2026-06-07T06:38:59Z",
+      "dateOnly": "2026-06-07",
+      "message": "uPTODATE ALL FILES"
+    },
+    {
+      "repo": "RKD-CRM",
+      "sha": "22bd0ee",
+      "date": "2026-06-09T04:11:58Z",
+      "dateOnly": "2026-06-09",
+      "message": "Docs ADDED For Setting Cardentials"
+    },
+    {
+      "repo": "RKD-CRM",
+      "sha": "e009e4b",
+      "date": "2026-06-09T06:36:53Z",
+      "dateOnly": "2026-06-09",
+      "message": "LINK"
+    },
+    {
+      "repo": "RKD-CRM",
+      "sha": "f489b46",
+      "date": "2026-06-09T07:09:07Z",
+      "dateOnly": "2026-06-09",
+      "message": "fixed member and admin data sepration"
+    },
+    {
+      "repo": "RKD-CRM",
+      "sha": "f5a1d2f",
+      "date": "2026-06-09T07:16:39Z",
+      "dateOnly": "2026-06-09",
+      "message": "mcp update for sep"
+    },
+    {
+      "repo": "RKD-CRM",
+      "sha": "d586ab7",
+      "date": "2026-06-09T08:16:58Z",
+      "dateOnly": "2026-06-09",
+      "message": "MCP UPDATES FOR USERS"
+    },
+    {
+      "repo": "RKD-CRM",
+      "sha": "2745b3c",
+      "date": "2026-06-09T09:02:25Z",
+      "dateOnly": "2026-06-09",
+      "message": "mcp json fix"
+    },
+    {
+      "repo": "RKD-CRM",
+      "sha": "7033914",
+      "date": "2026-06-10T05:34:16Z",
+      "dateOnly": "2026-06-10",
+      "message": "feat: initialize core database schema and implement contact management table component"
+    },
+    {
+      "repo": "RKD-CRM",
+      "sha": "d0ef51e",
+      "date": "2026-06-10T05:39:34Z",
+      "dateOnly": "2026-06-10",
+      "message": "feat: implement contacts dashboard with server-side filtering and data table UI"
+    },
+    {
+      "repo": "RKD-CRM",
+      "sha": "392bc55",
+      "date": "2026-06-10T05:51:55Z",
+      "dateOnly": "2026-06-10",
+      "message": "feat: implement PPTX and image compression tools with a new sidebar navigation structure"
+    },
+    {
+      "repo": "RKD-CRM",
+      "sha": "b89304d",
+      "date": "2026-06-11T07:09:45Z",
+      "dateOnly": "2026-06-11",
+      "message": "feat: integrate per-user Google OAuth and Google Drive attachments, deprecate Cloudinary"
+    },
+    {
+      "repo": "RKD-CRM",
+      "sha": "486bae5",
+      "date": "2026-06-11T08:29:53Z",
+      "dateOnly": "2026-06-11",
+      "message": "docs: update Google OAuth setup guide with detailed steps and mockups"
+    },
+    {
+      "repo": "RKD-CRM",
+      "sha": "d820c52",
+      "date": "2026-06-11T09:15:37Z",
+      "dateOnly": "2026-06-11",
+      "message": "feat: implement SMTP email service with Google Drive attachment support and automated email workflows."
+    },
+    {
+      "repo": "RKD-CRM",
+      "sha": "7391af0",
+      "date": "2026-06-11T09:23:34Z",
+      "dateOnly": "2026-06-11",
+      "message": "feat: add Google OAuth2 authentication service for user-specific credential management"
+    },
+    {
+      "repo": "RKD-CRM",
+      "sha": "d6ff363",
+      "date": "2026-06-11T09:35:34Z",
+      "dateOnly": "2026-06-11",
+      "message": "feat: add ComposeEditor component and database connection utility for email management"
+    },
+    {
+      "repo": "RKD-CRM",
+      "sha": "5bca781",
+      "date": "2026-06-11T09:48:14Z",
+      "dateOnly": "2026-06-11",
+      "message": "feat: add script to verify contact records associated with specific email address"
+    },
+    {
+      "repo": "RKD-CRM",
+      "sha": "a345868",
+      "date": "2026-06-11T09:57:24Z",
+      "dateOnly": "2026-06-11",
+      "message": "feat: implement dashboard, contacts, and templates pages with scratchpad debugging scripts"
+    },
+    {
+      "repo": "RKD-CRM",
+      "sha": "a2f3e26",
+      "date": "2026-06-11T10:39:56Z",
+      "dateOnly": "2026-06-11",
+      "message": "feat: initialize Prisma schema with models for users, contacts, emails, automations, and settings"
+    },
+    {
+      "repo": "RKD-CRM",
+      "sha": "29f8500",
+      "date": "2026-06-11T12:18:42Z",
+      "dateOnly": "2026-06-11",
+      "message": "feat: initialize Prisma schema and implement core CRM API endpoints and dashboard routes"
+    },
+    {
+      "repo": "RKD-CRM",
+      "sha": "9546f99",
+      "date": "2026-06-12T06:32:35Z",
+      "dateOnly": "2026-06-12",
+      "message": "feat: implement user settings management, notification system, and soft-delete support for CRM entities"
+    },
+    {
+      "repo": "RKD-CRM",
+      "sha": "9d8da17",
+      "date": "2026-06-12T06:49:21Z",
+      "dateOnly": "2026-06-12",
+      "message": "feat: support GET requests and auto-bypass secrets in dev for scheduled cron endpoint"
+    },
+    {
+      "repo": "RKD-CRM",
+      "sha": "564c354",
+      "date": "2026-06-12T07:04:08Z",
+      "dateOnly": "2026-06-12",
+      "message": "feat: show dynamic running origin base url in settings cron panel instead of hardcoded placeholder"
+    },
+    {
+      "repo": "RKD-CRM",
+      "sha": "163042a",
+      "date": "2026-06-13T05:26:54Z",
+      "dateOnly": "2026-06-13",
+      "message": "feat: force Google Drive attachments and add interactive thread file previews"
+    },
+    {
+      "repo": "RKD-CRM",
+      "sha": "2ba6673",
+      "date": "2026-06-13T05:34:40Z",
+      "dateOnly": "2026-06-13",
+      "message": "feat: bypass Vercel 413 by uploading Google Drive attachments directly from client-side"
+    },
+    {
+      "repo": "RKD-CRM",
+      "sha": "77c8541",
+      "date": "2026-06-13T05:50:20Z",
+      "dateOnly": "2026-06-13",
+      "message": "feat: add interactive file preview buttons and modals to Compose view"
+    },
+    {
+      "repo": "RKD-CRM",
+      "sha": "66682bf",
+      "date": "2026-06-13T05:55:51Z",
+      "dateOnly": "2026-06-13",
+      "message": "feat: add Email Status column to Contacts table showing ratio of opened sent emails"
+    },
+    {
+      "repo": "RKD-CRM",
+      "sha": "c472f53",
+      "date": "2026-06-13T06:07:49Z",
+      "dateOnly": "2026-06-13",
+      "message": "feat: attach Drive files <= 25MB as direct SMTP attachments so Gmail shows preview and download cards"
+    },
+    {
+      "repo": "RKD-CRM",
+      "sha": "4e62da6",
+      "date": "2026-06-13T06:27:39Z",
+      "dateOnly": "2026-06-13",
+      "message": "feat: strictly restrict Gemini from generating subject lines or Subject fields when modifying email body"
+    },
+    {
+      "repo": "RKD-CRM",
+      "sha": "15bae0a",
+      "date": "2026-06-13T06:33:03Z",
+      "dateOnly": "2026-06-13",
+      "message": "feat: optimize shorten prompt for AI assist to guarantee 30-50% length reduction"
+    },
+    {
+      "repo": "RKD-CRM",
+      "sha": "fdeb92a",
+      "date": "2026-06-13T06:54:17Z",
+      "dateOnly": "2026-06-13",
+      "message": "feat: implement advanced email workflow capabilities (archive, labels, rescheduling, single/bulk delete)"
+    },
+    {
+      "repo": "RKD-CRM",
+      "sha": "b88f0e3",
+      "date": "2026-06-13T07:20:17Z",
+      "dateOnly": "2026-06-13",
+      "message": "fix: resolve follow-up email threading issue by adding In-Reply-To and References headers"
+    },
+    {
+      "repo": "RKD-CRM",
+      "sha": "65f5641",
+      "date": "2026-06-13T07:34:34Z",
+      "dateOnly": "2026-06-13",
+      "message": "style: remove green left border from thread list item in mailbox"
+    },
+    {
+      "repo": "RKD-CRM",
+      "sha": "0ea69fd",
+      "date": "2026-06-13T09:06:19Z",
+      "dateOnly": "2026-06-13",
+      "message": "feat: make templates clickable to preview, and handle sent/cancelled followup statuses in mailbox UI"
+    },
+    {
+      "repo": "RKD-CRM",
+      "sha": "9d2b6f6",
+      "date": "2026-06-13T09:09:20Z",
+      "dateOnly": "2026-06-13",
+      "message": "feat: expand MCP server tools to 27 complete CRM management tools"
+    },
+    {
+      "repo": "RKD-CRM",
+      "sha": "d41b681",
+      "date": "2026-06-13T10:00:28Z",
+      "dateOnly": "2026-06-13",
+      "message": "feat: implement MCP route for CRM tool integrations including contact, lead, and email management"
+    },
+    {
+      "repo": "RKD-CRM",
+      "sha": "6178bb6",
+      "date": "2026-06-16T05:00:50Z",
+      "dateOnly": "2026-06-16",
+      "message": "refactor: update schema for Prisma parity and resolve syntax error in ThreadView.tsx"
+    },
+    {
+      "repo": "RKD-CRM",
+      "sha": "12bda5e",
+      "date": "2026-06-16T05:45:21Z",
+      "dateOnly": "2026-06-16",
+      "message": "feat: implement template management API, schema, and UI components for automation scheduling"
+    },
+    {
+      "repo": "RKD-CRM",
+      "sha": "ad43cf4",
+      "date": "2026-06-16T06:31:29Z",
+      "dateOnly": "2026-06-16",
+      "message": "feat: implement OAuth 2.0 authorization server endpoints and user consent flow"
+    },
+    {
+      "repo": "RKD-CRM",
+      "sha": "2ef291c",
+      "date": "2026-06-16T06:55:41Z",
+      "dateOnly": "2026-06-16",
+      "message": "feat: add API endpoints for bulk draft generation, email drafting, SMTP sending, follow-up assignment, and MCP integration"
+    },
+    {
+      "repo": "RKD-CRM",
+      "sha": "672e8ce",
+      "date": "2026-06-16T07:00:20Z",
+      "dateOnly": "2026-06-16",
+      "message": "feat: add cron job route to sync Gmail replies and execute pending automations"
+    },
+    {
+      "repo": "RKD-CRM",
+      "sha": "df9e333",
+      "date": "2026-06-16T07:12:10Z",
+      "dateOnly": "2026-06-16",
+      "message": "feat: implement draft management, automated follow-up processing, and dashboard composition components"
+    },
+    {
+      "repo": "RKD-CRM",
+      "sha": "4b7dc12",
+      "date": "2026-06-16T07:39:17Z",
+      "dateOnly": "2026-06-16",
+      "message": "feat: implement RyanAI support assistant API route and ComposeEditor component for RKD CRM"
+    },
+    {
+      "repo": "scrapling",
+      "sha": "ee44705",
+      "date": "2026-06-16T11:40:24Z",
+      "dateOnly": "2026-06-16",
+      "message": "feat: overhaul to V5 Buyer Research & Data Enrichment Factory"
+    },
+    {
+      "repo": "scrapling",
+      "sha": "2c81462",
+      "date": "2026-06-16T11:44:49Z",
+      "dateOnly": "2026-06-16",
+      "message": "cleanup: remove all legacy social media components and rename package to rkd-scrapling"
+    },
+    {
+      "repo": "scrapling",
+      "sha": "7ccf0ea",
+      "date": "2026-06-16T11:48:17Z",
+      "dateOnly": "2026-06-16",
+      "message": "feat: complete rebuild of RKD Scrapling V5 with zero-external-api constraint"
+    },
+    {
+      "repo": "scrapling",
+      "sha": "09196f0",
+      "date": "2026-06-16T11:49:44Z",
+      "dateOnly": "2026-06-16",
+      "message": "docs: add .env.example template"
+    },
+    {
+      "repo": "scrapling",
+      "sha": "0998893",
+      "date": "2026-06-16T11:56:35Z",
+      "dateOnly": "2026-06-16",
+      "message": "feat: change Google Sheets backup from automatic to manual triggers"
+    },
+    {
+      "repo": "scrapling",
+      "sha": "10173a1",
+      "date": "2026-06-16T11:59:57Z",
+      "dateOnly": "2026-06-16",
+      "message": "design: restyle dashboard UI to use OLED black, premium gold, and royal blue accents"
+    },
+    {
+      "repo": "scrapling",
+      "sha": "bb89ec2",
+      "date": "2026-06-16T12:38:16Z",
+      "dateOnly": "2026-06-16",
+      "message": "feat: implement market intelligence enrichment pipeline with lead processing UI, backend streaming support, and Supabase integration"
+    },
+    {
+      "repo": "scrapling",
+      "sha": "c3a96c6",
+      "date": "2026-06-17T06:39:34Z",
+      "dateOnly": "2026-06-17",
+      "message": "feat: implement V5 market intelligence enrichment dashboard with Supabase integration, settings management, and automated lead processing."
+    },
+    {
+      "repo": "RKD-RBC-AGENTS",
+      "sha": "69d0b68",
+      "date": "2026-07-13T05:18:50Z",
+      "dateOnly": "2026-07-13",
+      "message": "feat: add CORS headers and preflight OPTIONS handling for mobile PWA support"
+    },
+    {
+      "repo": "RKD-RBC-AGENTS-PWA",
+      "sha": "2391794",
+      "date": "2026-07-13T05:21:32Z",
+      "dateOnly": "2026-07-13",
+      "message": "feat: initial commit of RKD Mobile PWA app"
+    },
+    {
+      "repo": "RKD-RBC-AGENTS-PWA",
+      "sha": "7a6fd1c",
+      "date": "2026-07-13T05:28:44Z",
+      "dateOnly": "2026-07-13",
+      "message": "design: restrict PWA container to mobile width and center it on PC views"
+    },
+    {
+      "repo": "RKD-RBC-AGENTS",
+      "sha": "d4e5af7",
+      "date": "2026-07-13T05:33:22Z",
+      "dateOnly": "2026-07-13",
+      "message": "feat: trigger web push notification when saving to content library"
+    },
+    {
+      "repo": "RKD-RBC-AGENTS-PWA",
+      "sha": "894c59b",
+      "date": "2026-07-13T05:34:34Z",
+      "dateOnly": "2026-07-13",
+      "message": "feat: add Zomato-style card UI and iOS safari web push notification permission & subscription system"
+    },
+    {
+      "repo": "RKD-RBC-AGENTS-PWA",
+      "sha": "052dc5a",
+      "date": "2026-07-13T05:39:39Z",
+      "dateOnly": "2026-07-13",
+      "message": "fix: hardcode public VAPID key as fallback for Vercel builds"
+    },
+    {
+      "repo": "RKD-RBC-AGENTS-PWA",
+      "sha": "2d109e1",
+      "date": "2026-07-13T08:53:07Z",
+      "dateOnly": "2026-07-13",
+      "message": "fix: change post image scaling to object-contain to show full 3:4 preview"
+    },
+    {
+      "repo": "RKD-RBC-AGENTS",
+      "sha": "7798161",
+      "date": "2026-09-15T09:28:28Z",
+      "dateOnly": "2026-09-15",
+      "message": "feat: implement LinkedIn dual-connection architecture for personal and company page posting"
+    },
+    {
+      "repo": "RKD-PRICE-ALERT",
+      "sha": "1d168d2",
+      "date": "2026-10-07T10:34:44Z",
+      "dateOnly": "2026-10-07",
+      "message": "feat: complete RKD price alert PWA with Turso, Cloudflare Worker and Web Push"
+    },
+    {
+      "repo": "RKD-PRICE-ALERT",
+      "sha": "d02a023",
+      "date": "2026-10-07T11:19:22Z",
+      "dateOnly": "2026-10-07",
+      "message": "feat: 5-minute POST refresh cycle, real-time Google/Yahoo forex feed, and exact HH:MM:SS update timestamp"
+    },
+    {
+      "repo": "RKD-PRICE-ALERT",
+      "sha": "cc6f25d",
+      "date": "2026-10-07T11:35:24Z",
+      "dateOnly": "2026-10-07",
+      "message": "feat: direct Google Finance real-time price extraction and cache bump v3"
+    },
+    {
+      "repo": "RKD-PRICE-ALERT",
+      "sha": "5c1d00d",
+      "date": "2026-10-07T11:53:03Z",
+      "dateOnly": "2026-10-07",
+      "message": "feat: add user accounts for Rajesh Jain, Kunal Jain, and Aman Singh"
+    },
+    {
+      "repo": "RKD-WORK",
+      "sha": "a9a574c",
+      "date": "2026-10-09T06:47:37Z",
+      "dateOnly": "2026-10-09",
+      "message": "feat: complete WorkOS Tracker & Experience Engine with PWA, Next.js, and export engine"
+    },
+    {
+      "repo": "RKD-WORK",
+      "sha": "f602634",
+      "date": "2026-10-09T06:49:05Z",
+      "dateOnly": "2026-10-09",
+      "message": "chore: add Cloudflare wrangler deployment configuration"
+    },
+    {
+      "repo": "RKD-WORK",
+      "sha": "c713283",
+      "date": "2026-10-09T06:59:39Z",
+      "dateOnly": "2026-10-09",
+      "message": "feat: connect Turso cloud edge database with live sync pipeline"
+    }
+  ],
+  "byDate": {
+    "2026-05-18": [
+      {
+        "repo": "RKD-CRM",
+        "sha": "f27a04f",
+        "date": "2026-05-18T18:41:48Z",
+        "dateOnly": "2026-05-18",
+        "message": "first commit from hp"
+      }
+    ],
+    "2026-05-19": [
+      {
+        "repo": "RKD-RBC-AGENTS",
+        "sha": "219d8c4",
+        "date": "2026-05-19T08:47:17Z",
+        "dateOnly": "2026-05-19",
+        "message": "LETS COMMIT FIRST ON HP"
+      },
+      {
+        "repo": "scrapling",
+        "sha": "219d8c4",
+        "date": "2026-05-19T08:47:17Z",
+        "dateOnly": "2026-05-19",
+        "message": "LETS COMMIT FIRST ON HP"
+      },
+      {
+        "repo": "RKD-RBC-AGENTS",
+        "sha": "c739016",
+        "date": "2026-05-19T09:33:21Z",
+        "dateOnly": "2026-05-19",
+        "message": "feat: add linkedin setup guide and dynamic connection status display"
+      },
+      {
+        "repo": "scrapling",
+        "sha": "c739016",
+        "date": "2026-05-19T09:33:21Z",
+        "dateOnly": "2026-05-19",
+        "message": "feat: add linkedin setup guide and dynamic connection status display"
+      },
+      {
+        "repo": "RKD-RBC-AGENTS",
+        "sha": "c5e9bb5",
+        "date": "2026-05-19T09:41:24Z",
+        "dateOnly": "2026-05-19",
+        "message": "feat: implement LinkedInStudio component and integrate it into the main dashboard page"
+      },
+      {
+        "repo": "scrapling",
+        "sha": "c5e9bb5",
+        "date": "2026-05-19T09:41:24Z",
+        "dateOnly": "2026-05-19",
+        "message": "feat: implement LinkedInStudio component and integrate it into the main dashboard page"
+      },
+      {
+        "repo": "RKD-RBC-AGENTS",
+        "sha": "3b56c71",
+        "date": "2026-05-19T09:42:32Z",
+        "dateOnly": "2026-05-19",
+        "message": "style: clean up duplicate classes in image preview container"
+      },
+      {
+        "repo": "scrapling",
+        "sha": "3b56c71",
+        "date": "2026-05-19T09:42:32Z",
+        "dateOnly": "2026-05-19",
+        "message": "style: clean up duplicate classes in image preview container"
+      },
+      {
+        "repo": "RKD-RBC-AGENTS",
+        "sha": "dbf3c37",
+        "date": "2026-05-19T10:28:03Z",
+        "dateOnly": "2026-05-19",
+        "message": "feat: add SettingsHub component for managing AI strategy, asset configuration, and API keys"
+      },
+      {
+        "repo": "scrapling",
+        "sha": "dbf3c37",
+        "date": "2026-05-19T10:28:03Z",
+        "dateOnly": "2026-05-19",
+        "message": "feat: add SettingsHub component for managing AI strategy, asset configuration, and API keys"
+      },
+      {
+        "repo": "RKD-RBC-AGENTS",
+        "sha": "2d77a9f",
+        "date": "2026-05-19T10:47:00Z",
+        "dateOnly": "2026-05-19",
+        "message": "feat: implement main dashboard page with settings management, research tracking, and content library integration"
+      },
+      {
+        "repo": "scrapling",
+        "sha": "2d77a9f",
+        "date": "2026-05-19T10:47:00Z",
+        "dateOnly": "2026-05-19",
+        "message": "feat: implement main dashboard page with settings management, research tracking, and content library integration"
+      }
+    ],
+    "2026-05-21": [
+      {
+        "repo": "RKD-CRM",
+        "sha": "11e4c5e",
+        "date": "2026-05-21T04:07:08Z",
+        "dateOnly": "2026-05-21",
+        "message": "Initial commit — RKD CRM v1 (Next.js 16, Prisma 7, Neon, NextAuth, Gmail API)"
+      },
+      {
+        "repo": "RKD-CRM",
+        "sha": "d18d5eb",
+        "date": "2026-05-21T04:29:51Z",
+        "dateOnly": "2026-05-21",
+        "message": "chore: remove junk files, fix vercel.json crons, drop drizzle-kit"
+      },
+      {
+        "repo": "RKD-CRM",
+        "sha": "c6fa7a6",
+        "date": "2026-05-21T04:32:49Z",
+        "dateOnly": "2026-05-21",
+        "message": "chore: remove all outdated docs, old parser, unused tests, build cache"
+      },
+      {
+        "repo": "RKD-CRM",
+        "sha": "c9db624",
+        "date": "2026-05-21T04:37:32Z",
+        "dateOnly": "2026-05-21",
+        "message": "chore: remove vercel.json — crons handled by cron-job.org"
+      },
+      {
+        "repo": "RKD-CRM",
+        "sha": "ed85720",
+        "date": "2026-05-21T04:41:19Z",
+        "dateOnly": "2026-05-21",
+        "message": "fix: add .npmrc with legacy-peer-deps for nodemailer/next-auth conflict"
+      },
+      {
+        "repo": "RKD-CRM",
+        "sha": "5321154",
+        "date": "2026-05-21T04:43:29Z",
+        "dateOnly": "2026-05-21",
+        "message": "g"
+      },
+      {
+        "repo": "RKD-CRM",
+        "sha": "cce771f",
+        "date": "2026-05-21T04:48:36Z",
+        "dateOnly": "2026-05-21",
+        "message": "fix: cast contacts to any to resolve JsonValue type mismatch"
+      },
+      {
+        "repo": "RKD-CRM",
+        "sha": "2d0e174",
+        "date": "2026-05-21T05:31:55Z",
+        "dateOnly": "2026-05-21",
+        "message": "fix: show sent emails on dashboard — use NOT DRAFT filter instead of not null"
+      },
+      {
+        "repo": "RKD-CRM",
+        "sha": "0eea670",
+        "date": "2026-05-21T05:37:20Z",
+        "dateOnly": "2026-05-21",
+        "message": "fix: force dynamic rendering on dashboard to prevent stale cache"
+      },
+      {
+        "repo": "RKD-CRM",
+        "sha": "aa3f765",
+        "date": "2026-05-21T05:59:12Z",
+        "dateOnly": "2026-05-21",
+        "message": "fix: correct NOT DRAFT filter in dashboard API + add debug endpoint"
+      },
+      {
+        "repo": "RKD-CRM",
+        "sha": "7287c3c",
+        "date": "2026-05-21T06:01:23Z",
+        "dateOnly": "2026-05-21",
+        "message": "fix: use OR filter for null/non-DRAFT emails — Prisma NOT excludes nulls"
+      },
+      {
+        "repo": "RKD-CRM",
+        "sha": "24224f5",
+        "date": "2026-05-21T06:28:05Z",
+        "dateOnly": "2026-05-21",
+        "message": "feat: redesign automation panel — always visible, WA reminders, pill day selector"
+      },
+      {
+        "repo": "RKD-CRM",
+        "sha": "aaf2c1d",
+        "date": "2026-05-21T09:22:06Z",
+        "dateOnly": "2026-05-21",
+        "message": "F"
+      },
+      {
+        "repo": "RKD-CRM",
+        "sha": "795030e",
+        "date": "2026-05-21T10:36:05Z",
+        "dateOnly": "2026-05-21",
+        "message": "CC ADDED AND COMPOSE WRITING GONE FIX AND TEMPLATE CALANDER FIX AND OR COMPANY BOTH ID DONE"
+      },
+      {
+        "repo": "RKD-CRM",
+        "sha": "e343554",
+        "date": "2026-05-21T10:54:16Z",
+        "dateOnly": "2026-05-21",
+        "message": "cc page update"
+      },
+      {
+        "repo": "RKD-CRM",
+        "sha": "bc48131",
+        "date": "2026-05-21T11:59:21Z",
+        "dateOnly": "2026-05-21",
+        "message": "dashboard collapable now"
+      }
+    ],
+    "2026-05-22": [
+      {
+        "repo": "RKD-CPR",
+        "sha": "10aff72",
+        "date": "2026-05-22T05:41:53Z",
+        "dateOnly": "2026-05-22",
+        "message": "RKD DATA IMPORTER V1"
+      },
+      {
+        "repo": "RKD-CPR",
+        "sha": "dacdf38",
+        "date": "2026-05-22T05:45:57Z",
+        "dateOnly": "2026-05-22",
+        "message": "V2"
+      },
+      {
+        "repo": "RKD-CPR",
+        "sha": "4d5a92a",
+        "date": "2026-05-22T05:54:22Z",
+        "dateOnly": "2026-05-22",
+        "message": "Add credentials setup guide helper page"
+      },
+      {
+        "repo": "RKD-CPR",
+        "sha": "8527cc1",
+        "date": "2026-05-22T06:24:11Z",
+        "dateOnly": "2026-05-22",
+        "message": "Upgrade default Gemini model to 2.5-flash, fix RLS & storage policies, and resolve web-app-capable and GoTrue warnings"
+      },
+      {
+        "repo": "RKD-CPR",
+        "sha": "2293da3",
+        "date": "2026-05-22T06:27:00Z",
+        "dateOnly": "2026-05-22",
+        "message": "Fix typescript implicit any errors in login and parse API routes to fix Vercel compilation"
+      },
+      {
+        "repo": "RKD-CPR",
+        "sha": "718c4ce",
+        "date": "2026-05-22T06:37:31Z",
+        "dateOnly": "2026-05-22",
+        "message": "feat: catch and display Google Sheets sync errors in frontend"
+      },
+      {
+        "repo": "RKD-CPR",
+        "sha": "a32d7ba",
+        "date": "2026-05-22T06:40:13Z",
+        "dateOnly": "2026-05-22",
+        "message": "fix: escape apostrophe in SuccessCard and optimize prompt for printed POs"
+      },
+      {
+        "repo": "RKD-CPR",
+        "sha": "c001eac",
+        "date": "2026-05-22T06:52:37Z",
+        "dateOnly": "2026-05-22",
+        "message": "Enhance PO metadata columns, upgrade duplicate checking logic, add duplicate bypass toggle, and implement retro CLI sync console in SuccessCard"
+      },
+      {
+        "repo": "RKD-CPR",
+        "sha": "5501019",
+        "date": "2026-05-22T11:16:51Z",
+        "dateOnly": "2026-05-22",
+        "message": "feat: display both camera and gallery buttons side-by-side on mobile PWA UI"
+      },
+      {
+        "repo": "RKD-CPR",
+        "sha": "59a0f6f",
+        "date": "2026-05-22T11:22:39Z",
+        "dateOnly": "2026-05-22",
+        "message": "feat: customize system structure specifically for Crochet Passing Report handwritten sheets"
+      }
+    ],
+    "2026-05-23": [
+      {
+        "repo": "RKD-CPR",
+        "sha": "3931b5b",
+        "date": "2026-05-23T04:51:07Z",
+        "dateOnly": "2026-05-23",
+        "message": "Implement PWA and Add to Home Screen button for Android/iOS"
+      },
+      {
+        "repo": "RKD-CPR",
+        "sha": "0f3f218",
+        "date": "2026-05-23T04:57:25Z",
+        "dateOnly": "2026-05-23",
+        "message": "Set default redirect screen to /upload for all accounts"
+      },
+      {
+        "repo": "RKD-CPR",
+        "sha": "03272bb",
+        "date": "2026-05-23T05:17:04Z",
+        "dateOnly": "2026-05-23",
+        "message": "Update README.md for remind"
+      },
+      {
+        "repo": "RKD-CRM",
+        "sha": "151f9d7",
+        "date": "2026-05-23T06:25:53Z",
+        "dateOnly": "2026-05-23",
+        "message": "Feat/Fix: Add Help Button, RyanAI chatbot, fix Gmail reply tracking, and clean up schema relations"
+      },
+      {
+        "repo": "RKD-CRM",
+        "sha": "43e4c00",
+        "date": "2026-05-23T07:09:19Z",
+        "dateOnly": "2026-05-23",
+        "message": "Fix: Exclude api/cron routes from NextAuth middleware matcher"
+      },
+      {
+        "repo": "RKD-CRM",
+        "sha": "ecd9e89",
+        "date": "2026-05-23T07:21:54Z",
+        "dateOnly": "2026-05-23",
+        "message": "Fix: Sync replies for all active sent emails in check-followups cron"
+      },
+      {
+        "repo": "RKD-CRM",
+        "sha": "0063a02",
+        "date": "2026-05-23T07:33:16Z",
+        "dateOnly": "2026-05-23",
+        "message": "Fix: Differentiate list view between Inbox and Sent Outbox folders for email replies"
+      },
+      {
+        "repo": "RKD-CRM",
+        "sha": "d2f5b6c",
+        "date": "2026-05-23T11:04:01Z",
+        "dateOnly": "2026-05-23",
+        "message": "Fix: Add proper contact sender headers and avatar to incoming replies in thread view"
+      },
+      {
+        "repo": "RKD-CRM",
+        "sha": "d28ebe9",
+        "date": "2026-05-23T11:10:31Z",
+        "dateOnly": "2026-05-23",
+        "message": "Feat: Implement full Gmail-style thread view, chronological message grouping, and inline SMTP reply functionality in DashboardMailbox"
+      },
+      {
+        "repo": "RKD-CRM",
+        "sha": "ca3b5ab",
+        "date": "2026-05-23T11:12:48Z",
+        "dateOnly": "2026-05-23",
+        "message": "Fix: Filter out static assistant welcome message from chat history in ryanai route"
+      },
+      {
+        "repo": "RKD-CRM",
+        "sha": "5bfe0e7",
+        "date": "2026-05-23T11:21:37Z",
+        "dateOnly": "2026-05-23",
+        "message": "feat: implement local Q&A fuzzy matching and inline Gemini API key prompt for RyanAI"
+      },
+      {
+        "repo": "RKD-CRM",
+        "sha": "3ed7c69",
+        "date": "2026-05-23T11:49:53Z",
+        "dateOnly": "2026-05-23",
+        "message": "docs: add comprehensive README.md and scratch testing scripts"
+      }
+    ],
+    "2026-05-30": [
+      {
+        "repo": "RKD-CPR",
+        "sha": "8963fdc",
+        "date": "2026-05-30T04:28:50Z",
+        "dateOnly": "2026-05-30",
+        "message": "Update PWA logo to RKDCPR.LOGO.png and regenerate icons"
+      },
+      {
+        "repo": "RKD-CPR",
+        "sha": "f738319",
+        "date": "2026-05-30T05:24:36Z",
+        "dateOnly": "2026-05-30",
+        "message": "Final production prep: detailed README, credentials setup guide, and cleanup of redundant files"
+      },
+      {
+        "repo": "RKD-CRM",
+        "sha": "2057cb8",
+        "date": "2026-05-30T08:37:35Z",
+        "dateOnly": "2026-05-30",
+        "message": "feat: add Gemini reply snippets, WhatsApp Meta connection testing card, and color-coded notification badges"
+      }
+    ],
+    "2026-06-06": [
+      {
+        "repo": "RKD-CRM",
+        "sha": "84e85d7",
+        "date": "2026-06-06T06:04:58Z",
+        "dateOnly": "2026-06-06",
+        "message": "feat: implement Claude AI lead management with bulk draft generation and lead tracking capabilities"
+      },
+      {
+        "repo": "RKD-CRM",
+        "sha": "eef30eb",
+        "date": "2026-06-06T06:19:25Z",
+        "dateOnly": "2026-06-06",
+        "message": "Simplify MCP route implementation with direct Prisma queries to work with mcp-remote"
+      },
+      {
+        "repo": "RKD-CRM",
+        "sha": "e326909",
+        "date": "2026-06-06T06:23:32Z",
+        "dateOnly": "2026-06-06",
+        "message": "Replace MCP route with manual JSON-RPC protocol implementation to bypass transport issues"
+      },
+      {
+        "repo": "RKD-CRM",
+        "sha": "879d6c9",
+        "date": "2026-06-06T06:27:51Z",
+        "dateOnly": "2026-06-06",
+        "message": "Exclude /mcp from auth middleware"
+      },
+      {
+        "repo": "RKD-CRM",
+        "sha": "b309c2a",
+        "date": "2026-06-06T06:46:17Z",
+        "dateOnly": "2026-06-06",
+        "message": "Elevate Claude Leads and Drafts sections to first-class dashboard navigation pages"
+      },
+      {
+        "repo": "RKD-CRM",
+        "sha": "0e0d37e",
+        "date": "2026-06-06T06:51:23Z",
+        "dateOnly": "2026-06-06",
+        "message": "Allow drafts to be opened in Compose view to configure followups and send"
+      },
+      {
+        "repo": "RKD-CRM",
+        "sha": "8d1287a",
+        "date": "2026-06-06T10:06:29Z",
+        "dateOnly": "2026-06-06",
+        "message": "QUick button added"
+      },
+      {
+        "repo": "RKD-CRM",
+        "sha": "f2abcec",
+        "date": "2026-06-06T10:09:09Z",
+        "dateOnly": "2026-06-06",
+        "message": "UUID add in quick"
+      },
+      {
+        "repo": "RKD-CRM",
+        "sha": "139e798",
+        "date": "2026-06-06T11:38:49Z",
+        "dateOnly": "2026-06-06",
+        "message": "Sep leads"
+      }
+    ],
+    "2026-06-07": [
+      {
+        "repo": "RKD-CRM",
+        "sha": "1f793c2",
+        "date": "2026-06-07T06:38:59Z",
+        "dateOnly": "2026-06-07",
+        "message": "uPTODATE ALL FILES"
+      }
+    ],
+    "2026-06-09": [
+      {
+        "repo": "RKD-CRM",
+        "sha": "22bd0ee",
+        "date": "2026-06-09T04:11:58Z",
+        "dateOnly": "2026-06-09",
+        "message": "Docs ADDED For Setting Cardentials"
+      },
+      {
+        "repo": "RKD-CRM",
+        "sha": "e009e4b",
+        "date": "2026-06-09T06:36:53Z",
+        "dateOnly": "2026-06-09",
+        "message": "LINK"
+      },
+      {
+        "repo": "RKD-CRM",
+        "sha": "f489b46",
+        "date": "2026-06-09T07:09:07Z",
+        "dateOnly": "2026-06-09",
+        "message": "fixed member and admin data sepration"
+      },
+      {
+        "repo": "RKD-CRM",
+        "sha": "f5a1d2f",
+        "date": "2026-06-09T07:16:39Z",
+        "dateOnly": "2026-06-09",
+        "message": "mcp update for sep"
+      },
+      {
+        "repo": "RKD-CRM",
+        "sha": "d586ab7",
+        "date": "2026-06-09T08:16:58Z",
+        "dateOnly": "2026-06-09",
+        "message": "MCP UPDATES FOR USERS"
+      },
+      {
+        "repo": "RKD-CRM",
+        "sha": "2745b3c",
+        "date": "2026-06-09T09:02:25Z",
+        "dateOnly": "2026-06-09",
+        "message": "mcp json fix"
+      }
+    ],
+    "2026-06-10": [
+      {
+        "repo": "RKD-CRM",
+        "sha": "7033914",
+        "date": "2026-06-10T05:34:16Z",
+        "dateOnly": "2026-06-10",
+        "message": "feat: initialize core database schema and implement contact management table component"
+      },
+      {
+        "repo": "RKD-CRM",
+        "sha": "d0ef51e",
+        "date": "2026-06-10T05:39:34Z",
+        "dateOnly": "2026-06-10",
+        "message": "feat: implement contacts dashboard with server-side filtering and data table UI"
+      },
+      {
+        "repo": "RKD-CRM",
+        "sha": "392bc55",
+        "date": "2026-06-10T05:51:55Z",
+        "dateOnly": "2026-06-10",
+        "message": "feat: implement PPTX and image compression tools with a new sidebar navigation structure"
+      }
+    ],
+    "2026-06-11": [
+      {
+        "repo": "RKD-CRM",
+        "sha": "b89304d",
+        "date": "2026-06-11T07:09:45Z",
+        "dateOnly": "2026-06-11",
+        "message": "feat: integrate per-user Google OAuth and Google Drive attachments, deprecate Cloudinary"
+      },
+      {
+        "repo": "RKD-CRM",
+        "sha": "486bae5",
+        "date": "2026-06-11T08:29:53Z",
+        "dateOnly": "2026-06-11",
+        "message": "docs: update Google OAuth setup guide with detailed steps and mockups"
+      },
+      {
+        "repo": "RKD-CRM",
+        "sha": "d820c52",
+        "date": "2026-06-11T09:15:37Z",
+        "dateOnly": "2026-06-11",
+        "message": "feat: implement SMTP email service with Google Drive attachment support and automated email workflows."
+      },
+      {
+        "repo": "RKD-CRM",
+        "sha": "7391af0",
+        "date": "2026-06-11T09:23:34Z",
+        "dateOnly": "2026-06-11",
+        "message": "feat: add Google OAuth2 authentication service for user-specific credential management"
+      },
+      {
+        "repo": "RKD-CRM",
+        "sha": "d6ff363",
+        "date": "2026-06-11T09:35:34Z",
+        "dateOnly": "2026-06-11",
+        "message": "feat: add ComposeEditor component and database connection utility for email management"
+      },
+      {
+        "repo": "RKD-CRM",
+        "sha": "5bca781",
+        "date": "2026-06-11T09:48:14Z",
+        "dateOnly": "2026-06-11",
+        "message": "feat: add script to verify contact records associated with specific email address"
+      },
+      {
+        "repo": "RKD-CRM",
+        "sha": "a345868",
+        "date": "2026-06-11T09:57:24Z",
+        "dateOnly": "2026-06-11",
+        "message": "feat: implement dashboard, contacts, and templates pages with scratchpad debugging scripts"
+      },
+      {
+        "repo": "RKD-CRM",
+        "sha": "a2f3e26",
+        "date": "2026-06-11T10:39:56Z",
+        "dateOnly": "2026-06-11",
+        "message": "feat: initialize Prisma schema with models for users, contacts, emails, automations, and settings"
+      },
+      {
+        "repo": "RKD-CRM",
+        "sha": "29f8500",
+        "date": "2026-06-11T12:18:42Z",
+        "dateOnly": "2026-06-11",
+        "message": "feat: initialize Prisma schema and implement core CRM API endpoints and dashboard routes"
+      }
+    ],
+    "2026-06-12": [
+      {
+        "repo": "RKD-CRM",
+        "sha": "9546f99",
+        "date": "2026-06-12T06:32:35Z",
+        "dateOnly": "2026-06-12",
+        "message": "feat: implement user settings management, notification system, and soft-delete support for CRM entities"
+      },
+      {
+        "repo": "RKD-CRM",
+        "sha": "9d8da17",
+        "date": "2026-06-12T06:49:21Z",
+        "dateOnly": "2026-06-12",
+        "message": "feat: support GET requests and auto-bypass secrets in dev for scheduled cron endpoint"
+      },
+      {
+        "repo": "RKD-CRM",
+        "sha": "564c354",
+        "date": "2026-06-12T07:04:08Z",
+        "dateOnly": "2026-06-12",
+        "message": "feat: show dynamic running origin base url in settings cron panel instead of hardcoded placeholder"
+      }
+    ],
+    "2026-06-13": [
+      {
+        "repo": "RKD-CRM",
+        "sha": "163042a",
+        "date": "2026-06-13T05:26:54Z",
+        "dateOnly": "2026-06-13",
+        "message": "feat: force Google Drive attachments and add interactive thread file previews"
+      },
+      {
+        "repo": "RKD-CRM",
+        "sha": "2ba6673",
+        "date": "2026-06-13T05:34:40Z",
+        "dateOnly": "2026-06-13",
+        "message": "feat: bypass Vercel 413 by uploading Google Drive attachments directly from client-side"
+      },
+      {
+        "repo": "RKD-CRM",
+        "sha": "77c8541",
+        "date": "2026-06-13T05:50:20Z",
+        "dateOnly": "2026-06-13",
+        "message": "feat: add interactive file preview buttons and modals to Compose view"
+      },
+      {
+        "repo": "RKD-CRM",
+        "sha": "66682bf",
+        "date": "2026-06-13T05:55:51Z",
+        "dateOnly": "2026-06-13",
+        "message": "feat: add Email Status column to Contacts table showing ratio of opened sent emails"
+      },
+      {
+        "repo": "RKD-CRM",
+        "sha": "c472f53",
+        "date": "2026-06-13T06:07:49Z",
+        "dateOnly": "2026-06-13",
+        "message": "feat: attach Drive files <= 25MB as direct SMTP attachments so Gmail shows preview and download cards"
+      },
+      {
+        "repo": "RKD-CRM",
+        "sha": "4e62da6",
+        "date": "2026-06-13T06:27:39Z",
+        "dateOnly": "2026-06-13",
+        "message": "feat: strictly restrict Gemini from generating subject lines or Subject fields when modifying email body"
+      },
+      {
+        "repo": "RKD-CRM",
+        "sha": "15bae0a",
+        "date": "2026-06-13T06:33:03Z",
+        "dateOnly": "2026-06-13",
+        "message": "feat: optimize shorten prompt for AI assist to guarantee 30-50% length reduction"
+      },
+      {
+        "repo": "RKD-CRM",
+        "sha": "fdeb92a",
+        "date": "2026-06-13T06:54:17Z",
+        "dateOnly": "2026-06-13",
+        "message": "feat: implement advanced email workflow capabilities (archive, labels, rescheduling, single/bulk delete)"
+      },
+      {
+        "repo": "RKD-CRM",
+        "sha": "b88f0e3",
+        "date": "2026-06-13T07:20:17Z",
+        "dateOnly": "2026-06-13",
+        "message": "fix: resolve follow-up email threading issue by adding In-Reply-To and References headers"
+      },
+      {
+        "repo": "RKD-CRM",
+        "sha": "65f5641",
+        "date": "2026-06-13T07:34:34Z",
+        "dateOnly": "2026-06-13",
+        "message": "style: remove green left border from thread list item in mailbox"
+      },
+      {
+        "repo": "RKD-CRM",
+        "sha": "0ea69fd",
+        "date": "2026-06-13T09:06:19Z",
+        "dateOnly": "2026-06-13",
+        "message": "feat: make templates clickable to preview, and handle sent/cancelled followup statuses in mailbox UI"
+      },
+      {
+        "repo": "RKD-CRM",
+        "sha": "9d2b6f6",
+        "date": "2026-06-13T09:09:20Z",
+        "dateOnly": "2026-06-13",
+        "message": "feat: expand MCP server tools to 27 complete CRM management tools"
+      },
+      {
+        "repo": "RKD-CRM",
+        "sha": "d41b681",
+        "date": "2026-06-13T10:00:28Z",
+        "dateOnly": "2026-06-13",
+        "message": "feat: implement MCP route for CRM tool integrations including contact, lead, and email management"
+      }
+    ],
+    "2026-06-16": [
+      {
+        "repo": "RKD-CRM",
+        "sha": "6178bb6",
+        "date": "2026-06-16T05:00:50Z",
+        "dateOnly": "2026-06-16",
+        "message": "refactor: update schema for Prisma parity and resolve syntax error in ThreadView.tsx"
+      },
+      {
+        "repo": "RKD-CRM",
+        "sha": "12bda5e",
+        "date": "2026-06-16T05:45:21Z",
+        "dateOnly": "2026-06-16",
+        "message": "feat: implement template management API, schema, and UI components for automation scheduling"
+      },
+      {
+        "repo": "RKD-CRM",
+        "sha": "ad43cf4",
+        "date": "2026-06-16T06:31:29Z",
+        "dateOnly": "2026-06-16",
+        "message": "feat: implement OAuth 2.0 authorization server endpoints and user consent flow"
+      },
+      {
+        "repo": "RKD-CRM",
+        "sha": "2ef291c",
+        "date": "2026-06-16T06:55:41Z",
+        "dateOnly": "2026-06-16",
+        "message": "feat: add API endpoints for bulk draft generation, email drafting, SMTP sending, follow-up assignment, and MCP integration"
+      },
+      {
+        "repo": "RKD-CRM",
+        "sha": "672e8ce",
+        "date": "2026-06-16T07:00:20Z",
+        "dateOnly": "2026-06-16",
+        "message": "feat: add cron job route to sync Gmail replies and execute pending automations"
+      },
+      {
+        "repo": "RKD-CRM",
+        "sha": "df9e333",
+        "date": "2026-06-16T07:12:10Z",
+        "dateOnly": "2026-06-16",
+        "message": "feat: implement draft management, automated follow-up processing, and dashboard composition components"
+      },
+      {
+        "repo": "RKD-CRM",
+        "sha": "4b7dc12",
+        "date": "2026-06-16T07:39:17Z",
+        "dateOnly": "2026-06-16",
+        "message": "feat: implement RyanAI support assistant API route and ComposeEditor component for RKD CRM"
+      },
+      {
+        "repo": "scrapling",
+        "sha": "ee44705",
+        "date": "2026-06-16T11:40:24Z",
+        "dateOnly": "2026-06-16",
+        "message": "feat: overhaul to V5 Buyer Research & Data Enrichment Factory"
+      },
+      {
+        "repo": "scrapling",
+        "sha": "2c81462",
+        "date": "2026-06-16T11:44:49Z",
+        "dateOnly": "2026-06-16",
+        "message": "cleanup: remove all legacy social media components and rename package to rkd-scrapling"
+      },
+      {
+        "repo": "scrapling",
+        "sha": "7ccf0ea",
+        "date": "2026-06-16T11:48:17Z",
+        "dateOnly": "2026-06-16",
+        "message": "feat: complete rebuild of RKD Scrapling V5 with zero-external-api constraint"
+      },
+      {
+        "repo": "scrapling",
+        "sha": "09196f0",
+        "date": "2026-06-16T11:49:44Z",
+        "dateOnly": "2026-06-16",
+        "message": "docs: add .env.example template"
+      },
+      {
+        "repo": "scrapling",
+        "sha": "0998893",
+        "date": "2026-06-16T11:56:35Z",
+        "dateOnly": "2026-06-16",
+        "message": "feat: change Google Sheets backup from automatic to manual triggers"
+      },
+      {
+        "repo": "scrapling",
+        "sha": "10173a1",
+        "date": "2026-06-16T11:59:57Z",
+        "dateOnly": "2026-06-16",
+        "message": "design: restyle dashboard UI to use OLED black, premium gold, and royal blue accents"
+      },
+      {
+        "repo": "scrapling",
+        "sha": "bb89ec2",
+        "date": "2026-06-16T12:38:16Z",
+        "dateOnly": "2026-06-16",
+        "message": "feat: implement market intelligence enrichment pipeline with lead processing UI, backend streaming support, and Supabase integration"
+      }
+    ],
+    "2026-06-17": [
+      {
+        "repo": "scrapling",
+        "sha": "c3a96c6",
+        "date": "2026-06-17T06:39:34Z",
+        "dateOnly": "2026-06-17",
+        "message": "feat: implement V5 market intelligence enrichment dashboard with Supabase integration, settings management, and automated lead processing."
+      }
+    ],
+    "2026-07-13": [
+      {
+        "repo": "RKD-RBC-AGENTS",
+        "sha": "69d0b68",
+        "date": "2026-07-13T05:18:50Z",
+        "dateOnly": "2026-07-13",
+        "message": "feat: add CORS headers and preflight OPTIONS handling for mobile PWA support"
+      },
+      {
+        "repo": "RKD-RBC-AGENTS-PWA",
+        "sha": "2391794",
+        "date": "2026-07-13T05:21:32Z",
+        "dateOnly": "2026-07-13",
+        "message": "feat: initial commit of RKD Mobile PWA app"
+      },
+      {
+        "repo": "RKD-RBC-AGENTS-PWA",
+        "sha": "7a6fd1c",
+        "date": "2026-07-13T05:28:44Z",
+        "dateOnly": "2026-07-13",
+        "message": "design: restrict PWA container to mobile width and center it on PC views"
+      },
+      {
+        "repo": "RKD-RBC-AGENTS",
+        "sha": "d4e5af7",
+        "date": "2026-07-13T05:33:22Z",
+        "dateOnly": "2026-07-13",
+        "message": "feat: trigger web push notification when saving to content library"
+      },
+      {
+        "repo": "RKD-RBC-AGENTS-PWA",
+        "sha": "894c59b",
+        "date": "2026-07-13T05:34:34Z",
+        "dateOnly": "2026-07-13",
+        "message": "feat: add Zomato-style card UI and iOS safari web push notification permission & subscription system"
+      },
+      {
+        "repo": "RKD-RBC-AGENTS-PWA",
+        "sha": "052dc5a",
+        "date": "2026-07-13T05:39:39Z",
+        "dateOnly": "2026-07-13",
+        "message": "fix: hardcode public VAPID key as fallback for Vercel builds"
+      },
+      {
+        "repo": "RKD-RBC-AGENTS-PWA",
+        "sha": "2d109e1",
+        "date": "2026-07-13T08:53:07Z",
+        "dateOnly": "2026-07-13",
+        "message": "fix: change post image scaling to object-contain to show full 3:4 preview"
+      }
+    ],
+    "2026-09-15": [
+      {
+        "repo": "RKD-RBC-AGENTS",
+        "sha": "7798161",
+        "date": "2026-09-15T09:28:28Z",
+        "dateOnly": "2026-09-15",
+        "message": "feat: implement LinkedIn dual-connection architecture for personal and company page posting"
+      }
+    ],
+    "2026-10-07": [
+      {
+        "repo": "RKD-PRICE-ALERT",
+        "sha": "1d168d2",
+        "date": "2026-10-07T10:34:44Z",
+        "dateOnly": "2026-10-07",
+        "message": "feat: complete RKD price alert PWA with Turso, Cloudflare Worker and Web Push"
+      },
+      {
+        "repo": "RKD-PRICE-ALERT",
+        "sha": "d02a023",
+        "date": "2026-10-07T11:19:22Z",
+        "dateOnly": "2026-10-07",
+        "message": "feat: 5-minute POST refresh cycle, real-time Google/Yahoo forex feed, and exact HH:MM:SS update timestamp"
+      },
+      {
+        "repo": "RKD-PRICE-ALERT",
+        "sha": "cc6f25d",
+        "date": "2026-10-07T11:35:24Z",
+        "dateOnly": "2026-10-07",
+        "message": "feat: direct Google Finance real-time price extraction and cache bump v3"
+      },
+      {
+        "repo": "RKD-PRICE-ALERT",
+        "sha": "5c1d00d",
+        "date": "2026-10-07T11:53:03Z",
+        "dateOnly": "2026-10-07",
+        "message": "feat: add user accounts for Rajesh Jain, Kunal Jain, and Aman Singh"
+      }
+    ],
+    "2026-10-09": [
+      {
+        "repo": "RKD-WORK",
+        "sha": "a9a574c",
+        "date": "2026-10-09T06:47:37Z",
+        "dateOnly": "2026-10-09",
+        "message": "feat: complete WorkOS Tracker & Experience Engine with PWA, Next.js, and export engine"
+      },
+      {
+        "repo": "RKD-WORK",
+        "sha": "f602634",
+        "date": "2026-10-09T06:49:05Z",
+        "dateOnly": "2026-10-09",
+        "message": "chore: add Cloudflare wrangler deployment configuration"
+      },
+      {
+        "repo": "RKD-WORK",
+        "sha": "c713283",
+        "date": "2026-10-09T06:59:39Z",
+        "dateOnly": "2026-10-09",
+        "message": "feat: connect Turso cloud edge database with live sync pipeline"
+      }
+    ]
+  }
+}
