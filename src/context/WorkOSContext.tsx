@@ -65,41 +65,82 @@ export const WorkOSProvider: React.FC<{ children: React.ReactNode }> = ({ childr
 
   // Load from LocalStorage or seed defaults
   useEffect(() => {
-    try {
-      const savedLogs = localStorage.getItem(STORAGE_KEYS.LOGS);
-      const savedModules = localStorage.getItem(STORAGE_KEYS.MODULES);
-      const savedProfile = localStorage.getItem(STORAGE_KEYS.PROFILE);
-      const savedTurso = localStorage.getItem(STORAGE_KEYS.TURSO);
+    async function initData() {
+      try {
+        const savedLogs = localStorage.getItem(STORAGE_KEYS.LOGS);
+        const savedModules = localStorage.getItem(STORAGE_KEYS.MODULES);
+        const savedProfile = localStorage.getItem(STORAGE_KEYS.PROFILE);
+        const savedTurso = localStorage.getItem(STORAGE_KEYS.TURSO);
 
-      if (savedLogs) {
-        setLogs(JSON.parse(savedLogs));
-      } else {
-        const seeded = generateCuratedPastLogs();
-        setLogs(seeded);
-        localStorage.setItem(STORAGE_KEYS.LOGS, JSON.stringify(seeded));
-      }
+        let initialTursoConfig: TursoSyncConfig = {
+          databaseUrl: 'libsql://workos-rkdai.aws-ap-south-1.turso.io',
+          authToken: 'eyJhbGciOiJFZERTQSIsInR5cCI6IkpXVCJ9.eyJhIjoicnciLCJpYXQiOjE3OTE1Mjg4ODIsImlkIjoiMDFhMTFmNzEtMTQwMS03NzBmLWE1MmQtNTJmNDljNzM3NTE1Iiwia2lkIjoiN0RHNU9lQ2NLQ1pvZ1VjbUFaV2JKTUhObGFzOWN2b2NBR1VJUmRSUmZEdyIsInJpZCI6IjlhMjVmOGJmLTUxMGQtNGQ5My05YzljLWYxNGZhNDBkMjM5NiJ9.3EfPQ_euLRZQUIBqs7tEE-x6aFfdw6W8ixE6Q6b4Blbyb8inHuWnJbFbspvy3mIrRAiH-LZwVZUgjRFdJ-T7CA',
+          enabled: true,
+        };
 
-      if (savedModules) {
-        setModules(JSON.parse(savedModules));
-      } else {
-        localStorage.setItem(STORAGE_KEYS.MODULES, JSON.stringify(INITIAL_MODULES));
-      }
+        if (savedTurso) {
+          try {
+            const parsedTurso = JSON.parse(savedTurso);
+            if (parsedTurso.databaseUrl) {
+              initialTursoConfig = parsedTurso;
+            }
+          } catch (e) {
+            console.error('Turso config parse error:', e);
+          }
+        }
+        setTursoConfig(initialTursoConfig);
 
-      if (savedProfile) {
-        setProfile(JSON.parse(savedProfile));
-      } else {
-        localStorage.setItem(STORAGE_KEYS.PROFILE, JSON.stringify(DEFAULT_PROFILE));
-      }
+        // Attempt background pull from Turso if configured
+        if (initialTursoConfig.enabled && initialTursoConfig.databaseUrl && initialTursoConfig.authToken) {
+          try {
+            const { pullFromTurso } = await import('../lib/tursoSync');
+            const cloudData = await pullFromTurso(initialTursoConfig);
+            if (cloudData.logs && cloudData.logs.length > 0) {
+              setLogs(cloudData.logs);
+              localStorage.setItem(STORAGE_KEYS.LOGS, JSON.stringify(cloudData.logs));
+            }
+            if (cloudData.modules && cloudData.modules.length > 0) {
+              setModules(cloudData.modules);
+              localStorage.setItem(STORAGE_KEYS.MODULES, JSON.stringify(cloudData.modules));
+            }
+            if (cloudData.profile) {
+              setProfile(cloudData.profile);
+              localStorage.setItem(STORAGE_KEYS.PROFILE, JSON.stringify(cloudData.profile));
+            }
+            setIsLoading(false);
+            return;
+          } catch (cloudErr) {
+            console.warn('Could not fetch from Turso cloud initially, falling back to local storage:', cloudErr);
+          }
+        }
 
-      if (savedTurso) {
-        setTursoConfig(JSON.parse(savedTurso));
+        if (savedLogs) {
+          setLogs(JSON.parse(savedLogs));
+        } else {
+          const seeded = generateCuratedPastLogs();
+          setLogs(seeded);
+          localStorage.setItem(STORAGE_KEYS.LOGS, JSON.stringify(seeded));
+        }
+
+        if (savedModules) {
+          setModules(JSON.parse(savedModules));
+        } else {
+          localStorage.setItem(STORAGE_KEYS.MODULES, JSON.stringify(INITIAL_MODULES));
+        }
+
+        if (savedProfile) {
+          setProfile(JSON.parse(savedProfile));
+        } else {
+          localStorage.setItem(STORAGE_KEYS.PROFILE, JSON.stringify(DEFAULT_PROFILE));
+        }
+      } catch (e) {
+        console.error('Error loading WorkOS storage:', e);
+        setLogs(generateCuratedPastLogs());
+      } finally {
+        setIsLoading(false);
       }
-    } catch (e) {
-      console.error('Error loading WorkOS local storage:', e);
-      setLogs(generateCuratedPastLogs());
-    } finally {
-      setIsLoading(false);
     }
+    initData();
   }, []);
 
   // Save helpers
@@ -140,17 +181,38 @@ export const WorkOSProvider: React.FC<{ children: React.ReactNode }> = ({ childr
     }
     updated.sort((a, b) => b.date.localeCompare(a.date));
     saveLogs(updated);
+
+    // Background push to Turso
+    if (tursoConfig.enabled && tursoConfig.databaseUrl && tursoConfig.authToken) {
+      import('../lib/tursoSync').then(({ pushLogToTurso }) => {
+        pushLogToTurso(tursoConfig, newLog).catch((err) => console.error('Turso sync push failed:', err));
+      });
+    }
   };
 
   const updateLog = (log: WorkLog) => {
     const updated = logs.map((l) => (l.id === log.id ? log : l));
     updated.sort((a, b) => b.date.localeCompare(a.date));
     saveLogs(updated);
+
+    // Background push to Turso
+    if (tursoConfig.enabled && tursoConfig.databaseUrl && tursoConfig.authToken) {
+      import('../lib/tursoSync').then(({ pushLogToTurso }) => {
+        pushLogToTurso(tursoConfig, log).catch((err) => console.error('Turso sync push failed:', err));
+      });
+    }
   };
 
   const deleteLog = (id: string) => {
     const updated = logs.filter((l) => l.id !== id);
     saveLogs(updated);
+
+    // Background delete on Turso
+    if (tursoConfig.enabled && tursoConfig.databaseUrl && tursoConfig.authToken) {
+      import('../lib/tursoSync').then(({ deleteLogFromTurso }) => {
+        deleteLogFromTurso(tursoConfig, id).catch((err) => console.error('Turso sync delete failed:', err));
+      });
+    }
   };
 
   const bulkAddLogs = (newLogsData: Omit<WorkLog, 'id'>[]) => {
