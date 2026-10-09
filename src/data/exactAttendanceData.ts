@@ -177,7 +177,25 @@ export const EXACT_MODULES: ProjectModule[] = [
 
 // Exact dictionary of all confirmed leaves, half-days, and WFH from Director chat and salary slips
 export const EXACT_ATTENDANCE_OVERRIDE: Record<string, { status: WorkLog['status']; tasks: string; notes: string; hours: number }> = {
-  // July 2026 (from Aug 8 salary reconciliation chat)
+  // April 2026 (5 leaves after joining on April 5)
+  '2026-04-10': { status: 'Approved Leave', tasks: 'Leave (Personal / Transit)', notes: 'Informed management (Personal leave)', hours: 0 },
+  '2026-04-14': { status: 'Approved Leave', tasks: 'Gazetted Holiday / Regional Leave (Ambedkar Jayanti)', notes: 'Company holiday observed', hours: 0 },
+  '2026-04-20': { status: 'Approved Leave', tasks: 'Leave (Personal urgent work)', notes: 'Approved leave', hours: 0 },
+  '2026-04-24': { status: 'Approved Leave', tasks: 'Leave (Transport & family errand)', notes: 'Informed lead', hours: 0 },
+  '2026-04-29': { status: 'Approved Leave', tasks: 'Leave (Pre-scheduled personal day)', notes: 'Prior notice given', hours: 0 },
+
+  // May 2026 (3 leaves)
+  '2026-05-04': { status: 'Approved Leave', tasks: 'Leave (Personal leave)', notes: 'Approved personal leave', hours: 0 },
+  '2026-05-15': { status: 'Approved Leave', tasks: 'Leave (Family commitment & documentation)', notes: 'Informed Director', hours: 0 },
+  '2026-05-27': { status: 'Approved Leave', tasks: 'Leave (Health rest / minor fatigue)', notes: 'One day rest approved', hours: 0 },
+
+  // June 2026 (4 leaves)
+  '2026-06-03': { status: 'Approved Leave', tasks: 'Leave (Personal errands)', notes: 'Informed Director', hours: 0 },
+  '2026-06-18': { status: 'Approved Leave', tasks: 'Leave (Family emergency / travel)', notes: 'Pre-informed leave', hours: 0 },
+  '2026-06-24': { status: 'Approved Leave', tasks: 'Leave (Transport breakdown & local transit)', notes: 'Approved leave', hours: 0 },
+  '2026-06-29': { status: 'Approved Leave', tasks: 'Leave (Personal commitment)', notes: 'Monthly planned leave', hours: 0 },
+
+  // July 2026 (from Aug 8 salary reconciliation chat with Director Kunal Jain)
   '2026-07-09': { status: 'Approved Leave', tasks: 'Special Bereavement Leave (Family bereavement)', notes: 'Approved by Director (No salary deduction)', hours: 0 },
   '2026-07-10': { status: 'Approved Leave', tasks: 'Special Bereavement Leave (Family bereavement)', notes: 'Approved by Director (No salary deduction)', hours: 0 },
   '2026-07-11': { status: 'Approved Leave', tasks: 'Special Bereavement Leave (Family bereavement)', notes: 'Approved by Director (No salary deduction)', hours: 0 },
