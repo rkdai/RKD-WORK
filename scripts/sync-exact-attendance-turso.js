@@ -17,7 +17,7 @@ const EXACT_EMPLOYEE_PROFILE = {
   companyAddress: 'Industrial Area, Sector 25, Panipat - 132103, Haryana, India',
   companyWebsite: 'https://rkd.in',
   joiningDate: '2026-04-05',
-  relievingDate: '2026-10-15',
+  relievingDate: '2026-10-16',
   isCurrentlyEmployed: 1,
   managerName: 'Kunal Jain',
   managerTitle: 'Director',
@@ -41,13 +41,14 @@ const EXACT_MODULES = [
     category: 'AI Systems',
     status: 'Shipped',
     startDate: '2026-07-01',
-    completionDate: '2026-10-09',
-    impact: 'Flagship generative CAD suite in Google Flow AI Lab for industrial bathmat production: 01. Design Layer (vector line extraction) & 02. Material Layer (physical tufted, loop, yarn-dyed simulations).',
-    techStack: JSON.stringify(['Google Flow AI Lab', 'Gemini 2.5 Vision AI', 'Custom Style LoRAs', 'Procedural Weave Shaders', 'Textile CAD Engine']),
+    completionDate: '2026-10-15',
+    impact: 'Flagship generative CAD suite in Google Flow AI Lab for industrial bathmat production: 01. Design Layer (vector line extraction) & 02. Material Layer (physical tufted, loop, yarn-dyed simulations) + 03. Dynamic ColorFamily Engine.',
+    techStack: JSON.stringify(['Google Flow AI Lab', 'Gemini 2.5 Vision AI', 'Custom Style LoRAs', 'Procedural Weave Shaders', 'Textile CAD Engine', 'ColorFamily System']),
     repoOrDocUrl: 'https://flow.google.com/project/f7e66d4d-a756-43bb-a842-3794e8d9c10b/tools',
     keyFeatures: JSON.stringify([
       'Layer 01 (Design Layer): Extracts clean vector CAD artwork from any moodboard or product reference photo',
       'Layer 02 (Material Layer): Simulates exact physical tufted bathmats, cut-pile, loop, and yarn-dyed construction',
+      'ColorFamily Feature (Shipped Oct 15): Automated Pantone & Yarn shade group clustering for instant colorway variations',
       'Evolved across extensive lab iterations: RKD MATGEN V2.1, TuftDesign AI, Yarn Dyed Tufted AI, and Bathmat Pro Studio'
     ])
   },
@@ -216,6 +217,15 @@ const EXACT_ATTENDANCE_OVERRIDE = {
   '2026-09-30': { status: 'WFH', tasks: 'Work From Home (Zero transport late night / exhaustion)', notes: 'Informed Kunal Sir; confirmed as Paid WFH in salary record', hours: 8.0 },
   '2026-10-02': { status: 'Approved Leave', tasks: 'National Holiday (Gandhi Jayanti)', notes: 'Gazetted Holiday (Paid)', hours: 0 },
   '2026-10-05': { status: 'Approved Leave', tasks: 'Leave', notes: 'Unpaid Leave (Listed on official salary slip)', hours: 0 },
+  '2026-10-08': { status: 'Approved Leave', tasks: 'Personal Leave', notes: 'Informed management; full day leave', hours: 0 },
+  '2026-10-09': { status: 'Approved Leave', tasks: 'Half-day Leave (Friday afternoon leave)', notes: 'Half day worked (Friday prayers/half day deduction); completed WorkOS sync modules', hours: 4.0 },
+  '2026-10-10': { status: 'Office Present', tasks: 'Office Present: Engineered team quick-access & direct login modal for RKD Price Alert PWA.', notes: 'Full day office present (Saturday working/active sprint)', hours: 8.5 },
+  '2026-10-11': { status: 'Office Present', tasks: 'Office Present: Tested Turso edge replication and cloud database sync on live worker.', notes: 'Office present (Sunday special deployment sprint)', hours: 8.0 },
+  '2026-10-12': { status: 'Office Present', tasks: 'Office Present: Refined MIACIA Textile CAD Engine vector extraction shaders and swatch library.', notes: 'Full day office attendance', hours: 8.5 },
+  '2026-10-13': { status: 'Office Present', tasks: 'Office Present: Updated Germany 3D Stall layout coordinates and lightmap bake rendering.', notes: 'Full day office attendance', hours: 8.5 },
+  '2026-10-14': { status: 'Office Present', tasks: 'Office Present: Optimized CAD design layer export pipeline and high-resolution texture maps.', notes: 'Full day office attendance', hours: 8.5 },
+  '2026-10-15': { status: 'WFH', tasks: 'Work From Home (Inclement weather): Built & deployed new ColorFamily feature in RKD CAD Engine.', notes: 'WFH approved due to severe weather conditions; shipped colorfamily feature', hours: 8.5 },
+  '2026-10-16': { status: 'Office Present', tasks: 'Office Present: Live deployment verification, Turso libSQL sync audit & WorkOS repository synchronization.', notes: 'Full day office attendance (Current active date)', hours: 8.5 },
 };
 
 function buildLogs() {
@@ -223,18 +233,19 @@ function buildLogs() {
   const logs = [];
 
   const startDate = new Date(2026, 2, 19); // March 19, 2026
-  const endDate = new Date(2026, 9, 9); // October 9, 2026
+  const endDate = new Date(2026, 9, 16); // October 16, 2026
 
   let cur = new Date(startDate);
   let dayIndex = 0;
 
   while (cur <= endDate) {
     const dayOfWeek = cur.getDay();
-    if (dayOfWeek !== 0 && dayOfWeek !== 6) { // Weekdays only
-      const yyyy = cur.getFullYear();
-      const mm = String(cur.getMonth() + 1).padStart(2, '0');
-      const dd = String(cur.getDate()).padStart(2, '0');
-      const dateStr = `${yyyy}-${mm}-${dd}`;
+    const yyyy = cur.getFullYear();
+    const mm = String(cur.getMonth() + 1).padStart(2, '0');
+    const dd = String(cur.getDate()).padStart(2, '0');
+    const dateStr = `${yyyy}-${mm}-${dd}`;
+
+    if ((dayOfWeek !== 0 && dayOfWeek !== 6) || EXACT_ATTENDANCE_OVERRIDE[dateStr]) {
 
       if (EXACT_ATTENDANCE_OVERRIDE[dateStr]) {
         const ov = EXACT_ATTENDANCE_OVERRIDE[dateStr];
