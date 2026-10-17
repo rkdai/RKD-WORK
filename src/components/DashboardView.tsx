@@ -169,35 +169,35 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
       </div>
 
       {/* TOP KPI CARDS */}
-      <div className="grid grid-cols-2 lg:grid-cols-5 gap-3 sm:gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4">
         
         {/* Total Days */}
         <div className="rounded-xl border border-zinc-800 bg-zinc-900/60 p-4 relative overflow-hidden">
           <div className="flex items-center justify-between text-zinc-400">
-            <span className="text-xs font-medium">Days Logged</span>
+            <span className="text-xs font-semibold">Total Days Logged</span>
             <CheckCircle2 className="w-4 h-4 text-emerald-400" />
           </div>
           <div className="mt-2 flex items-baseline gap-2">
             <span className="text-2xl sm:text-3xl font-extrabold text-zinc-100">{stats.totalDays}</span>
-            <span className="text-[11px] text-zinc-500">Days</span>
+            <span className="text-[11px] text-zinc-500 font-medium">Days verified</span>
           </div>
           <p className="text-[11px] text-zinc-400 mt-1">
-            Total {Math.round(stats.totalHours)} logged hours
+            Total {Math.round(stats.totalHours)} logged hours in tenure
           </p>
         </div>
 
         {/* Office vs WFH Split */}
         <div className="rounded-xl border border-zinc-800 bg-zinc-900/60 p-4">
           <div className="flex items-center justify-between text-zinc-400">
-            <span className="text-xs font-medium">Office vs WFH</span>
+            <span className="text-xs font-semibold">Attendance Breakdown</span>
             <Building2 className="w-4 h-4 text-blue-400" />
           </div>
           <div className="mt-2 flex items-baseline gap-2">
-            <span className="text-2xl sm:text-3xl font-extrabold text-zinc-100">{stats.officeDays}</span>
-            <span className="text-xs text-zinc-500 font-medium">/ {stats.wfhDays} WFH</span>
+            <span className="text-2xl sm:text-3xl font-extrabold text-emerald-400">{stats.officeDays}</span>
+            <span className="text-xs text-zinc-400 font-medium">Office &bull; <strong className="text-blue-400">{stats.wfhDays}</strong> WFH</span>
           </div>
           {/* Progress split bar */}
-          <div className="mt-2 h-1.5 w-full bg-zinc-800 rounded-full overflow-hidden flex">
+          <div className="mt-2.5 h-1.5 w-full bg-zinc-800 rounded-full overflow-hidden flex">
             <div 
               className="bg-emerald-500 h-full transition-all" 
               style={{ width: `${(stats.officeDays / (stats.totalDays || 1)) * 100}%` }}
@@ -214,45 +214,15 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
         {/* Leaves Taken / Allowance */}
         <div className="rounded-xl border border-zinc-800 bg-zinc-900/60 p-4">
           <div className="flex items-center justify-between text-zinc-400">
-            <span className="text-xs font-medium">Leaves Balance</span>
+            <span className="text-xs font-semibold">Leaves Balance</span>
             <CalendarOff className="w-4 h-4 text-amber-400" />
           </div>
           <div className="mt-2 flex items-baseline gap-2">
-            <span className="text-2xl sm:text-3xl font-extrabold text-zinc-100">{stats.leavesRemaining}</span>
+            <span className="text-2xl sm:text-3xl font-extrabold text-amber-400">{stats.leavesRemaining}</span>
             <span className="text-xs text-zinc-500 font-medium">/ {profile.leavesAllowance} left</span>
           </div>
-          <p className="text-[11px] text-amber-400/90 mt-1">
-            {stats.leavesTaken} leaves taken in tenure
-          </p>
-        </div>
-
-        {/* Attendance Reliability % */}
-        <div className="rounded-xl border border-zinc-800 bg-zinc-900/60 p-4">
-          <div className="flex items-center justify-between text-zinc-400">
-            <span className="text-xs font-medium">Reliability Rate</span>
-            <TrendingUp className="w-4 h-4 text-emerald-400" />
-          </div>
-          <div className="mt-2 flex items-baseline gap-2">
-            <span className="text-2xl sm:text-3xl font-extrabold text-zinc-100">{stats.reliabilityPercent}%</span>
-            <span className="text-[11px] text-emerald-400 font-medium">Exemplary</span>
-          </div>
           <p className="text-[11px] text-zinc-400 mt-1">
-            Consistent uptime on record
-          </p>
-        </div>
-
-        {/* Shipped Modules */}
-        <div className="col-span-2 lg:col-span-1 rounded-xl border border-zinc-800 bg-zinc-900/60 p-4">
-          <div className="flex items-center justify-between text-zinc-400">
-            <span className="text-xs font-medium">Modules Shipped</span>
-            <Layers className="w-4 h-4 text-purple-400" />
-          </div>
-          <div className="mt-2 flex items-baseline gap-2">
-            <span className="text-2xl sm:text-3xl font-extrabold text-zinc-100">{stats.shippedModules}</span>
-            <span className="text-[11px] text-zinc-500">Systems</span>
-          </div>
-          <p className="text-[11px] text-zinc-400 mt-1">
-            Core business automations
+            {stats.leavesTaken} leaves utilized in official tenure
           </p>
         </div>
 

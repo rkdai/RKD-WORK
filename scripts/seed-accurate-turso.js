@@ -20,7 +20,7 @@ const DEFAULT_PROFILE = {
   joiningDate: '2026-03-02',
   relievingDate: '2026-10-15',
   isCurrentlyEmployed: 1,
-  managerName: 'Bhupinder Pal Singh',
+  managerName: 'Kunal Jain',
   managerTitle: 'Director of Operations & Digital Initiatives',
   leavesAllowance: 18,
   responsibilities: JSON.stringify([
@@ -161,7 +161,7 @@ function generateLogs() {
     '2026-10-02': { status: 'Approved Leave', task: 'National Holiday (Gandhi Jayanti)', notes: 'Company holiday' },
     '2026-10-06': { status: 'Office Present', task: 'Integrated Web Push (VAPID) and Turso SQLite database on Cloudflare Workers edge' },
     '2026-10-07': { status: 'Office Present', task: 'Connected real-time Google Finance forex feed; deployed PWA with 5-minute sync to production' },
-    '2026-10-08': { status: 'Office Present', task: 'Configured team access for 6 users (Rajesh, Kunal, Aman, Himanshu, Ryan, Bhupinder)' },
+    '2026-10-08': { status: 'Office Present', task: 'Configured team access for USD/INR PWA (Rajesh, Kunal, Aman, Himanshu, Ryan)' },
     '2026-10-09': { status: 'Office Present', task: 'Engineered WorkOS Tracker & Experience Engine with instant certificate generation & PWA' },
   };
 

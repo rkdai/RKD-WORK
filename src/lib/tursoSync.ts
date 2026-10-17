@@ -183,3 +183,49 @@ export async function deleteLogFromTurso(config: TursoSyncConfig, id: string): P
     },
   ]);
 }
+
+/**
+ * Push notification settings to Turso
+ */
+export async function pushNotificationSettingsToTurso(
+  config: TursoSyncConfig,
+  reminderTime: string,
+  isEnabled: boolean,
+  lastNotifiedDate?: string
+): Promise<void> {
+  await executeTursoHttp(config, [
+    {
+      sql: `INSERT INTO notification_settings (id, reminder_time, is_enabled, last_notified_date, updated_at)
+            VALUES ('primary', ?, ?, ?, datetime('now'))
+            ON CONFLICT(id) DO UPDATE SET
+              reminder_time=excluded.reminder_time,
+              is_enabled=excluded.is_enabled,
+              last_notified_date=coalesce(excluded.last_notified_date, notification_settings.last_notified_date),
+              updated_at=datetime('now');`,
+      args: [reminderTime, isEnabled ? 1 : 0, lastNotifiedDate || null],
+    },
+  ]);
+}
+
+/**
+ * Pull notification settings from Turso
+ */
+export async function pullNotificationSettingsFromTurso(
+  config: TursoSyncConfig
+): Promise<{ reminderTime: string; isEnabled: boolean; lastNotifiedDate?: string } | null> {
+  try {
+    const res = await executeTursoHttp(config, [
+      { sql: 'SELECT reminder_time, is_enabled, last_notified_date FROM notification_settings WHERE id = "primary" LIMIT 1;' },
+    ]);
+    const row = res[0]?.rows?.[0];
+    if (!row) return null;
+    return {
+      reminderTime: String(row[0]?.value || '10:00'),
+      isEnabled: Number(row[1]?.value) === 1,
+      lastNotifiedDate: row[2]?.value ? String(row[2].value) : undefined,
+    };
+  } catch (err) {
+    console.warn('Could not pull notification settings from Turso:', err);
+    return null;
+  }
+}

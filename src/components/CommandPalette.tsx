@@ -86,13 +86,13 @@ export const CommandPalette: React.FC<CommandPaletteProps> = ({
       },
     },
     {
-      id: 'bulk-backfill',
-      title: 'Bulk Backfill & CSV Import',
-      subtitle: 'Import past months of attendance entries',
-      icon: Upload,
+      id: 'nav-reminders',
+      title: 'Daily Attendance Reminder Settings',
+      subtitle: 'Change morning reminder time & notification triggers',
+      icon: Settings,
       action: () => {
+        onNavigate('settings');
         onClose();
-        onOpenBulkBackfill();
       },
     },
     {

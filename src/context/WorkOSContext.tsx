@@ -1,7 +1,7 @@
 'use client';
 
 import React, { createContext, useContext, useEffect, useState, useMemo } from 'react';
-import { WorkLog, ProjectModule, EmployeeProfile, TursoSyncConfig } from '../types';
+import { WorkLog, ProjectModule, EmployeeProfile, TursoSyncConfig, NotificationSettings } from '../types';
 import { DEFAULT_PROFILE, INITIAL_MODULES, generateCuratedPastLogs } from '../data/seedData';
 
 interface WorkOSContextType {
@@ -9,6 +9,7 @@ interface WorkOSContextType {
   modules: ProjectModule[];
   profile: EmployeeProfile;
   tursoConfig: TursoSyncConfig;
+  notifications: NotificationSettings;
   isLoading: boolean;
   
   // Actions
@@ -23,6 +24,9 @@ interface WorkOSContextType {
   
   updateProfile: (profile: EmployeeProfile) => void;
   updateTursoConfig: (config: TursoSyncConfig) => void;
+  updateNotificationSettings: (settings: Partial<NotificationSettings>) => Promise<void>;
+  requestNotificationPermission: () => Promise<boolean>;
+  sendTestNotification: () => void;
   
   exportJsonData: () => string;
   importJsonData: (jsonStr: string) => boolean;
@@ -50,6 +54,7 @@ const STORAGE_KEYS = {
   MODULES: 'workos_modules_v1',
   PROFILE: 'workos_profile_v1',
   TURSO: 'workos_turso_v1',
+  NOTIFICATIONS: 'workos_notifications_v1',
 };
 
 export const WorkOSProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
@@ -60,6 +65,11 @@ export const WorkOSProvider: React.FC<{ children: React.ReactNode }> = ({ childr
     databaseUrl: '',
     authToken: '',
     enabled: false,
+  });
+  const [notifications, setNotifications] = useState<NotificationSettings>({
+    reminderTime: '10:00',
+    isEnabled: true,
+    permission: 'default',
   });
   const [isLoading, setIsLoading] = useState(true);
 
@@ -114,6 +124,23 @@ export const WorkOSProvider: React.FC<{ children: React.ReactNode }> = ({ childr
           }
         }
 
+        // Load notification settings
+        const savedNotifs = localStorage.getItem(STORAGE_KEYS.NOTIFICATIONS);
+        let curNotifs: NotificationSettings = {
+          reminderTime: '10:00',
+          isEnabled: true,
+          permission: typeof window !== 'undefined' && 'Notification' in window ? Notification.permission : 'unsupported',
+        };
+        if (savedNotifs) {
+          try {
+            const parsed = JSON.parse(savedNotifs);
+            curNotifs = { ...curNotifs, ...parsed };
+          } catch (e) {
+            console.error('Failed to parse saved notifications:', e);
+          }
+        }
+        setNotifications(curNotifs);
+
         if (savedLogs) {
           setLogs(JSON.parse(savedLogs));
         } else {
@@ -132,6 +159,25 @@ export const WorkOSProvider: React.FC<{ children: React.ReactNode }> = ({ childr
           setProfile(JSON.parse(savedProfile));
         } else {
           localStorage.setItem(STORAGE_KEYS.PROFILE, JSON.stringify(DEFAULT_PROFILE));
+        }
+
+        // Pull Turso notification settings if available
+        if (initialTursoConfig.enabled && initialTursoConfig.databaseUrl && initialTursoConfig.authToken) {
+          import('../lib/tursoSync').then(async ({ pullNotificationSettingsFromTurso }) => {
+            const remoteNotifs = await pullNotificationSettingsFromTurso(initialTursoConfig);
+            if (remoteNotifs) {
+              setNotifications((prev) => {
+                const merged: NotificationSettings = {
+                  ...prev,
+                  reminderTime: remoteNotifs.reminderTime || prev.reminderTime,
+                  isEnabled: remoteNotifs.isEnabled !== undefined ? remoteNotifs.isEnabled : prev.isEnabled,
+                  lastNotifiedDate: remoteNotifs.lastNotifiedDate || prev.lastNotifiedDate,
+                };
+                localStorage.setItem(STORAGE_KEYS.NOTIFICATIONS, JSON.stringify(merged));
+                return merged;
+              });
+            }
+          }).catch(console.error);
         }
       } catch (e) {
         console.error('Error loading WorkOS storage:', e);
@@ -163,6 +209,168 @@ export const WorkOSProvider: React.FC<{ children: React.ReactNode }> = ({ childr
     setTursoConfig(newTurso);
     localStorage.setItem(STORAGE_KEYS.TURSO, JSON.stringify(newTurso));
   };
+
+  const saveNotifications = (newNotifs: NotificationSettings) => {
+    setNotifications(newNotifs);
+    localStorage.setItem(STORAGE_KEYS.NOTIFICATIONS, JSON.stringify(newNotifs));
+  };
+
+  const updateNotificationSettings = async (settings: Partial<NotificationSettings>) => {
+    const updated: NotificationSettings = {
+      ...notifications,
+      ...settings,
+    };
+    saveNotifications(updated);
+
+    // Push to Turso cloud
+    if (tursoConfig.enabled && tursoConfig.databaseUrl && tursoConfig.authToken) {
+      import('../lib/tursoSync').then(({ pushNotificationSettingsToTurso }) => {
+        pushNotificationSettingsToTurso(tursoConfig, updated.reminderTime, updated.isEnabled, updated.lastNotifiedDate)
+          .catch((err) => console.error('Turso notification sync error:', err));
+      });
+    }
+  };
+
+  const requestNotificationPermission = async (): Promise<boolean> => {
+    if (typeof window === 'undefined' || !('Notification' in window)) {
+      alert('Notifications are not supported in this browser. On iPhone, make sure to "Add to Home Screen" first.');
+      return false;
+    }
+
+    try {
+      const permission = await Notification.requestPermission();
+      const updated: NotificationSettings = {
+        ...notifications,
+        permission,
+        isEnabled: permission === 'granted',
+      };
+      saveNotifications(updated);
+
+      if (permission === 'granted') {
+        // Send a welcome notification
+        if ('serviceWorker' in navigator && navigator.serviceWorker.controller) {
+          navigator.serviceWorker.controller.postMessage({
+            type: 'SEND_NOTIFICATION',
+            title: 'Attendance Reminder Enabled',
+            options: {
+              body: `Daily attendance reminder set for ${updated.reminderTime} every morning.`,
+              icon: '/icons/icon-192.png',
+              badge: '/icons/icon-192.png',
+              tag: 'rkd-welcome-reminder',
+            },
+          });
+        } else {
+          new Notification('Attendance Reminder Enabled', {
+            body: `Daily attendance reminder set for ${updated.reminderTime} every morning.`,
+            icon: '/icons/icon-192.png',
+          });
+        }
+        return true;
+      }
+      return false;
+    } catch (err) {
+      console.error('Error requesting notification permission:', err);
+      return false;
+    }
+  };
+
+  const sendTestNotification = () => {
+    if (typeof window === 'undefined') return;
+
+    if (!('Notification' in window)) {
+      alert('Notifications are not supported on this browser. On iOS, add to Home Screen first.');
+      return;
+    }
+
+    if (Notification.permission !== 'granted') {
+      requestNotificationPermission();
+      return;
+    }
+
+    const title = 'RKD WorkOS Attendance Reminder';
+    const options = {
+      body: `Hi ${profile.employeeName.split(' ')[0]}, please mark your attendance and log today's deliverables!`,
+      icon: '/icons/icon-192.png',
+      badge: '/icons/icon-192.png',
+      vibrate: [200, 100, 200],
+      tag: 'workos-test-reminder',
+    };
+
+    if ('serviceWorker' in navigator && navigator.serviceWorker.controller) {
+      navigator.serviceWorker.controller.postMessage({
+        type: 'SEND_NOTIFICATION',
+        title,
+        options,
+      });
+    } else {
+      new Notification(title, options);
+    }
+  };
+
+  // Daily Timer Check Effect: checks if time >= reminderTime and hasn't logged today
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+
+    const checkReminder = () => {
+      if (!notifications.isEnabled) return;
+      if (typeof window !== 'undefined' && 'Notification' in window && Notification.permission !== 'granted') return;
+
+      const now = new Date();
+      const todayStr = now.toISOString().slice(0, 10);
+
+      // Check if user has already marked attendance for today
+      const alreadyLogged = logs.some((l) => l.date === todayStr);
+      if (alreadyLogged) return;
+
+      // Check if already notified today
+      if (notifications.lastNotifiedDate === todayStr) return;
+
+      // Parse user's reminderTime (e.g. "10:00")
+      const [targetHours, targetMinutes] = (notifications.reminderTime || '10:00').split(':').map(Number);
+      const curHours = now.getHours();
+      const curMinutes = now.getMinutes();
+
+      if (curHours > targetHours || (curHours === targetHours && curMinutes >= targetMinutes)) {
+        // Trigger notification
+        const title = 'Mark Today\'s Attendance';
+        const options = {
+          body: `Hi ${profile.employeeName.split(' ')[0]}, please mark your attendance and log your deliverables for RKD Furnishings.`,
+          icon: '/icons/icon-192.png',
+          badge: '/icons/icon-192.png',
+          tag: `workos-daily-${todayStr}`,
+        };
+
+        if ('serviceWorker' in navigator && navigator.serviceWorker.controller) {
+          navigator.serviceWorker.controller.postMessage({
+            type: 'SEND_NOTIFICATION',
+            title,
+            options,
+          });
+        } else if ('Notification' in window && Notification.permission === 'granted') {
+          new Notification(title, options);
+        }
+
+        // Mark notified today
+        const updatedNotifs = {
+          ...notifications,
+          lastNotifiedDate: todayStr,
+        };
+        saveNotifications(updatedNotifs);
+
+        if (tursoConfig.enabled && tursoConfig.databaseUrl && tursoConfig.authToken) {
+          import('../lib/tursoSync').then(({ pushNotificationSettingsToTurso }) => {
+            pushNotificationSettingsToTurso(tursoConfig, updatedNotifs.reminderTime, updatedNotifs.isEnabled, todayStr)
+              .catch(console.error);
+          });
+        }
+      }
+    };
+
+    // Check on mount and every 30 seconds
+    checkReminder();
+    const interval = setInterval(checkReminder, 30000);
+    return () => clearInterval(interval);
+  }, [notifications, logs, profile.employeeName, tursoConfig]);
 
   // Log CRUD
   const addLog = (logData: Omit<WorkLog, 'id'>) => {
@@ -362,6 +570,7 @@ export const WorkOSProvider: React.FC<{ children: React.ReactNode }> = ({ childr
         modules,
         profile,
         tursoConfig,
+        notifications,
         isLoading,
         addLog,
         updateLog,
@@ -372,6 +581,9 @@ export const WorkOSProvider: React.FC<{ children: React.ReactNode }> = ({ childr
         deleteModule,
         updateProfile: saveProfile,
         updateTursoConfig: saveTurso,
+        updateNotificationSettings,
+        requestNotificationPermission,
+        sendTestNotification,
         exportJsonData,
         importJsonData,
         exportCsvData,

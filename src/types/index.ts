@@ -49,3 +49,10 @@ export interface TursoSyncConfig {
   enabled: boolean;
   lastSyncedAt?: string;
 }
+
+export interface NotificationSettings {
+  reminderTime: string; // e.g. "10:00"
+  isEnabled: boolean;
+  permission: NotificationPermission | 'unsupported';
+  lastNotifiedDate?: string; // YYYY-MM-DD
+}

@@ -269,7 +269,7 @@ export const ExperienceCertificateView: React.FC = () => {
                 <div className="mt-6">
                   {/* Digital seal / signature badge */}
                   <div className="w-32 border-b-2 border-zinc-900 pb-1 font-serif text-sm italic font-bold text-zinc-950">
-                    Bhupinder Pal Singh
+                    {profile.managerName}
                   </div>
                   <p className="font-bold text-zinc-900 mt-1">{profile.managerName}</p>
                   <p className="text-zinc-600">{profile.managerTitle}</p>

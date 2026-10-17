@@ -12,11 +12,12 @@ import { BulkBackfillModal } from '../components/BulkBackfillModal';
 import { CommandPalette } from '../components/CommandPalette';
 import { WorkLog } from '../types';
 
+import { IosPwaPrompt } from '../components/IosPwaPrompt';
+
 export default function Home() {
   const [activeTab, setActiveTab] = useState<string>('dashboard');
   const [isQuickLogOpen, setIsQuickLogOpen] = useState(false);
   const [editingLog, setEditingLog] = useState<WorkLog | null>(null);
-  const [isBulkBackfillOpen, setIsBulkBackfillOpen] = useState(false);
   const [isCommandPaletteOpen, setIsCommandPaletteOpen] = useState(false);
 
   // Keyboard shortcut listeners (Cmd+K / Ctrl+K and N)
@@ -44,13 +45,12 @@ export default function Home() {
       if (e.key === 'Escape') {
         if (isCommandPaletteOpen) setIsCommandPaletteOpen(false);
         if (isQuickLogOpen) setIsQuickLogOpen(false);
-        if (isBulkBackfillOpen) setIsBulkBackfillOpen(false);
       }
     };
 
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [isCommandPaletteOpen, isQuickLogOpen, isBulkBackfillOpen]);
+  }, [isCommandPaletteOpen, isQuickLogOpen]);
 
   const handleEditLog = (log: WorkLog) => {
     setEditingLog(log);
@@ -72,6 +72,9 @@ export default function Home() {
         onOpenQuickLog={handleOpenAdd}
         onOpenCommandPalette={() => setIsCommandPaletteOpen(true)}
       />
+
+      {/* iOS PWA Install & Notification Permission Banner */}
+      <IosPwaPrompt />
 
       {/* Main Content Workspace */}
       <main className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6">
@@ -121,19 +124,13 @@ export default function Home() {
         initialLog={editingLog}
       />
 
-      {/* Bulk Backfill / CSV Import Modal */}
-      <BulkBackfillModal
-        isOpen={isBulkBackfillOpen}
-        onClose={() => setIsBulkBackfillOpen(false)}
-      />
-
       {/* Fast Keyboard Command Palette (Cmd+K) */}
       <CommandPalette
         isOpen={isCommandPaletteOpen}
         onClose={() => setIsCommandPaletteOpen(false)}
         onNavigate={setActiveTab}
         onOpenQuickLog={handleOpenAdd}
-        onOpenBulkBackfill={() => setIsBulkBackfillOpen(true)}
+        onOpenBulkBackfill={() => {}}
       />
 
     </div>
