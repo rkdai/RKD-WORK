@@ -10,7 +10,7 @@ const client = createClient({
 const fs = require('fs');
 
 const DEFAULT_PROFILE = {
-  employeeName: 'Rihan',
+  employeeName: 'Ryan Shoyab',
   employeeId: 'RKD-ENG-2026-08',
   designation: 'AI Systems & Workflow Builder',
   department: 'Technology, AI & Automation',

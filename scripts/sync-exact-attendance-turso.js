@@ -9,7 +9,7 @@ const client = createClient({
 const githubData = JSON.parse(fs.readFileSync('./all-github-commits.json', 'utf8'));
 
 const EXACT_EMPLOYEE_PROFILE = {
-  employeeName: 'Ryan Shoyab Shaikh',
+  employeeName: 'Ryan Shoyab',
   employeeId: 'RKD-ENG-2026-08',
   designation: 'AI Systems & Automation Developer',
   department: 'IT & Automation',

@@ -75,7 +75,7 @@ const INITIAL_MODULES = [
 ];
 
 const DEFAULT_PROFILE = {
-  name: 'Rihan (RKD Core Team)',
+  name: 'Ryan Shoyab',
   designation: 'AI Systems & Workflow Builder',
   employeeId: 'RKD-AI-001',
   companyName: 'RKD Group / RKD Enterprises',

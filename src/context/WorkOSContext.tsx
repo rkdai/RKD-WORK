@@ -247,17 +247,20 @@ export const WorkOSProvider: React.FC<{ children: React.ReactNode }> = ({ childr
       saveNotifications(updated);
 
       if (permission === 'granted') {
-        // Send a welcome notification
-        if ('serviceWorker' in navigator && navigator.serviceWorker.controller) {
-          navigator.serviceWorker.controller.postMessage({
-            type: 'SEND_NOTIFICATION',
-            title: 'Attendance Reminder Enabled',
-            options: {
+        // Send a welcome notification via ServiceWorkerRegistration (iOS WebKit requirement)
+        if ('serviceWorker' in navigator) {
+          navigator.serviceWorker.ready.then((reg) => {
+            reg.showNotification('Attendance Reminder Enabled', {
               body: `Daily attendance reminder set for ${updated.reminderTime} every morning.`,
               icon: '/icons/icon-192.png',
               badge: '/icons/icon-192.png',
               tag: 'rkd-welcome-reminder',
-            },
+            });
+          }).catch(() => {
+            new Notification('Attendance Reminder Enabled', {
+              body: `Daily attendance reminder set for ${updated.reminderTime} every morning.`,
+              icon: '/icons/icon-192.png',
+            });
           });
         } else {
           new Notification('Attendance Reminder Enabled', {
@@ -274,17 +277,17 @@ export const WorkOSProvider: React.FC<{ children: React.ReactNode }> = ({ childr
     }
   };
 
-  const sendTestNotification = () => {
+  const sendTestNotification = async () => {
     if (typeof window === 'undefined') return;
 
     if (!('Notification' in window)) {
-      alert('Notifications are not supported on this browser. On iOS, add to Home Screen first.');
+      alert('Notifications are not supported in Safari browser tabs. Please tap Share (⎋) -> "Add to Home Screen" first, open the app from your home screen, then tap this button.');
       return;
     }
 
     if (Notification.permission !== 'granted') {
-      requestNotificationPermission();
-      return;
+      const granted = await requestNotificationPermission();
+      if (!granted) return;
     }
 
     const title = 'RKD WorkOS Attendance Reminder';
@@ -296,11 +299,11 @@ export const WorkOSProvider: React.FC<{ children: React.ReactNode }> = ({ childr
       tag: 'workos-test-reminder',
     };
 
-    if ('serviceWorker' in navigator && navigator.serviceWorker.controller) {
-      navigator.serviceWorker.controller.postMessage({
-        type: 'SEND_NOTIFICATION',
-        title,
-        options,
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.ready.then((reg) => {
+        reg.showNotification(title, options);
+      }).catch(() => {
+        new Notification(title, options);
       });
     } else {
       new Notification(title, options);

@@ -2,7 +2,7 @@ import { ProjectModule, WorkLog, EmployeeProfile } from '../types';
 import allGithubCommits from '../../all-github-commits.json';
 
 export const EXACT_EMPLOYEE_PROFILE: EmployeeProfile = {
-  employeeName: 'Ryan Shoyab Shaikh',
+  employeeName: 'Ryan Shoyab',
   employeeId: 'RKD-ENG-2026-08',
   designation: 'AI Systems & Automation Developer',
   department: 'IT & Automation',
