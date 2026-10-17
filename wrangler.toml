@@ -1,5 +1,6 @@
 name = "rkd-work"
 compatibility_date = "2024-09-23"
+account_id = "fd2982478ce9795a8bf6ee3d79b9ff27"
 
 [assets]
 directory = "./out"
