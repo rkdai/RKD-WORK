@@ -10,7 +10,7 @@ export const EXACT_EMPLOYEE_PROFILE: EmployeeProfile = {
   companyAddress: 'Industrial Area, Sector 25, Panipat - 132103, Haryana, India',
   companyWebsite: 'https://rkd.in',
   joiningDate: '2026-04-05',
-  relievingDate: '2026-10-16',
+  relievingDate: '2026-10-19',
   isCurrentlyEmployed: true,
   managerName: 'Kunal Jain',
   managerTitle: 'Director',
@@ -244,7 +244,9 @@ export const EXACT_ATTENDANCE_OVERRIDE: Record<string, { status: WorkLog['status
   '2026-10-13': { status: 'Office Present', tasks: 'Office Present: Updated Germany 3D Stall layout coordinates and lightmap bake rendering.', notes: 'Full day office attendance', hours: 8.5 },
   '2026-10-14': { status: 'Office Present', tasks: 'Office Present: Optimized CAD design layer export pipeline and high-resolution texture maps.', notes: 'Full day office attendance', hours: 8.5 },
   '2026-10-15': { status: 'WFH', tasks: 'Work From Home (Inclement weather): Built & deployed new ColorFamily feature in RKD CAD Engine.', notes: 'WFH approved due to severe weather conditions; shipped colorfamily feature', hours: 8.5 },
-  '2026-10-16': { status: 'Office Present', tasks: 'Office Present: Live deployment verification, Turso libSQL sync audit & WorkOS repository synchronization.', notes: 'Full day office attendance (Current active date)', hours: 8.5 },
+  '2026-10-16': { status: 'Office Present', tasks: 'Office Present: Live deployment verification, Turso libSQL sync audit & WorkOS repository synchronization.', notes: 'Full day office attendance', hours: 8.5 },
+  '2026-10-17': { status: 'Office Present', tasks: 'Office Present: Migrated Cloudflare Worker production deployment to official RKD account (ai@rkd.in) and verified zero duplicate workers.', notes: 'Full day office attendance (Saturday active sprint)', hours: 8.5 },
+  '2026-10-19': { status: 'Office Present', tasks: 'Office Present: Ongoing production monitoring, notification sync, and internal tooling maintenance.', notes: 'Full day office attendance (Current active date)', hours: 8.5 },
 };
 
 export function buildExactVerifiedLogs(): WorkLog[] {
@@ -252,7 +254,7 @@ export function buildExactVerifiedLogs(): WorkLog[] {
   const logs: WorkLog[] = [];
 
   const startDate = new Date(2026, 2, 19); // March 19, 2026
-  const endDate = new Date(2026, 9, 16); // October 16, 2026
+  const endDate = new Date(2026, 9, 19); // October 19, 2026
 
   let cur = new Date(startDate);
   let dayIndex = 0;
